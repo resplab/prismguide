@@ -46,7 +46,16 @@ PRISM currently hosts `covidseir v0.0.0.9006`.
 
 ## Calling COVIDSEIR API through R
 
-We have developed a client R package, `r margin_note("For the R package peer models, see github.com/resplab/peermodels")` called `peermodels` that facilitates access to the models hosted on Peer Models Network cloud. The package is currently under active development and can be downloaded from GitHub: 
+We have developed the client R package `peermodels` that facilitates access to the models hosted on Peer Models Network cloud. The package is currently under active development and can be downloaded from GitHub: 
+```{marginfigure}
+_Current API Response times_
+
+Initital handshake              : 1-3s
+
+Fitting with default parameters : 3-5m
+
+Fetching Graphics               :  10s
+```
 
 ```{r, message=FALSE, eval=FALSE}
 install.packages("remotes", repos="https://mirror.rcg.sfu.ca/mirror/CRAN/")
@@ -147,16 +156,6 @@ curl \
 http://model-covidseir.cp.prism-ubc.linaralabs.com/ocpu/library/covidseirPrism/R/gateway/json
 ```
 
-
-```{marginfigure}
-_Current API Response times_
-
-Initital handshake   : 1-3s
-
-Model fitting        : 3-5m
-
-Fetching Graphics    :  10s
-```
 
 ## Intergration with Shiny, Excel, Python, Javascript, etc.
 
