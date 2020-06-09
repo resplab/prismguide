@@ -48,7 +48,7 @@ PRISM currently hosts `covidseir v0.0.0.9006`.
 
 We have developed a client R package, `r margin_note("For the R package peer models, see github.com/resplab/peermodels")` called `peermodels` that facilitates access to the models hosted on Peer Models Network cloud. The package is currently under active development and can be downloaded from GitHub: 
 
-```{r, message=FALSE}
+```{r, message=FALSE, eval=FALSE}
 install.packages("remotes", repos="https://mirror.rcg.sfu.ca/mirror/CRAN/")
 remotes::install_github("resplab/peermodels")
 ```
