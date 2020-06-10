@@ -187,5 +187,5 @@ PRISM models can also be called through Javascript and practically any programmi
 
 ## Known Issues
 
-The current experimental implementation of the `covidseir` package has some limitations. All inputs can be currently be modified except for `pars`, and `state_0`. Additionally, depending on the number of `chains` and `iterations`, the `html` connection might be dropped for calls that more than a dozen minutes. We are actively working to implement asynchronous support which would email the results back to the user when multi-hour model runs are requested. 
+The current experimental implementation of the `covidseir` package has some limitations. Depending on the number of `chains` and `iterations`, the `html` connection might be dropped for calls that more than a dozen minutes. We are actively working to implement asynchronous support which would email the results back to the user when hours long model runs are requested. 
 :::
