@@ -45,6 +45,7 @@ We have recently deployed the Bayesian SEIR model to estimate physical-distancin
 :::
 
 `r margin_note("Anderson, S. C., Edwards, A. M., Yerlanov, M., Mulberry, N., Stockdale, J., Iyaniwura, S. A., Falcao, R. C., Otterstatter, M. C., Irvine, M. A., Janjua, N. Z., Coombs, D., & Colijn, C. (2020). Estimating the impact of COVID-19 control measures using a Bayesian model of physical distancing. MedRxiv, 2020.04.17.20070086")`
+
 ## Calling COVIDSEIR API through R
 
 We have developed the client R package `peermodels` that facilitates access to the models hosted on Peer Models Network cloud. The package is currently under active development and can be downloaded from GitHub: 
