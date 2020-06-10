@@ -1,6 +1,6 @@
 ---
-title: "BC COVIDSEIR Model on the Cloud"
-subtitle: "An implementation in the Peer Models Network"
+title: "Implementing BC COVIDSEIR Model on the Cloud"
+subtitle: "A Report for Dr. Caroline Colijn"
 author: "Amin Adibi, Stephanie Harvard, Mohsen Sadatsafavi"
 date: "`r Sys.Date()`"
 output:
@@ -41,9 +41,10 @@ In its current implementation, PRISM can hosts models that are developed in R, i
 
 Synchronous APIs calls are currently implemented and support for asynchronous calls that require extra long processing times are under active development. 
 
-PRISM currently hosts `covidseir v0.0.0.9006`. 
+We have recently deployed the Bayesian SEIR model to estimate physical-distancing effects [developed by Anderson et al](https://doi.org/10.1101/2020.04.17.20070086) to our cloud infrastructure. The current version of the R package deployed to the PRISM server is `covidseir v0.0.0.9006`. 
 :::
 
+`r margin_note("Anderson, S. C., Edwards, A. M., Yerlanov, M., Mulberry, N., Stockdale, J., Iyaniwura, S. A., Falcao, R. C., Otterstatter, M. C., Irvine, M. A., Janjua, N. Z., Coombs, D., & Colijn, C. (2020). Estimating the impact of COVID-19 control measures using a Bayesian model of physical distancing. MedRxiv, 2020.04.17.20070086")`
 ## Calling COVIDSEIR API through R
 
 We have developed the client R package `peermodels` that facilitates access to the models hosted on Peer Models Network cloud. The package is currently under active development and can be downloaded from GitHub: 
