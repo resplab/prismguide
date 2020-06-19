@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 API Users’ Guide | Models on the Peer Models Network</title>
+  <title>6 CODEXCOPD | Models on the Peer Models Network</title>
   <meta name="description" content="User guide for accessing models hosted on the Peer Models Network cloud." />
   <meta name="generator" content="bookdown 0.19.1 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12 API Users’ Guide | Models on the Peer Models Network" />
+  <meta property="og:title" content="6 CODEXCOPD | Models on the Peer Models Network" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 API Users’ Guide | Models on the Peer Models Network" />
+  <meta name="twitter:title" content="6 CODEXCOPD | Models on the Peer Models Network" />
   
   <meta name="twitter:description" content="User guide for accessing models hosted on the Peer Models Network cloud." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="qrisk3.html"/>
-
+<link rel="prev" href="chdwilson.html"/>
+<link rel="next" href="covidseir.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -105,57 +105,55 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="api-users-guide" class="section level1">
-<h1><span class="header-section-number">12</span> API Users’ Guide</h1>
-<div id="accept-1" class="section level2">
-<h2><span class="header-section-number">12.1</span> ACCEPT</h2>
-<p><strong>Cloud Access through R</strong></p>
-<p>User’s can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patients provided in the <code>accept</code> package:</p>
-<pre><code>remotes::install_github (resplab/peermodels)
-library(peermodels)
-connect_to_model(&quot;accept&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
-results &lt;- model_run(input)</code></pre>
-<p><strong>Cloud Access through Python</strong></p>
-<pre><code>import json
-import requests
-url = &#39;https://prism.peermodelsnetwork.com/route/accept/run&#39;
-headers = {&#39;x-prism-auth-user&#39;: YOUR_API_KEY}
-model_run = requests.post(url, headers=headers,
-json = {&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;ID&quot;: &quot;10001&quot;,&quot;male&quot;: 1,&quot;age&quot;: 57,&quot;smoker&quot;: 0,&quot;oxygen&quot;: 0,&quot;statin&quot;: 0,&quot;LAMA&quot;: 1,&quot;LABA&quot;: 1,&quot;ICS&quot;: 1,&quot;FEV1&quot;: 51,&quot;BMI&quot;: 18,&quot;SGRQ&quot;: 63,&quot;LastYrExacCount&quot;: 2,&quot;LastYrSevExacCount&quot;: 1,&quot;randomized_azithromycin&quot;: 0,&quot;randomized_statin&quot;: 0,&quot;randomized_LAMA&quot;: 0,&quot;randomized_LABA&quot;: 0,&quot;randomized_ICS&quot;: 0, &quot;random_sampling_N&quot; : 1000, &quot;random_distribution_iteration&quot; : 20000, &quot;calculate_CIs&quot; : &quot;TRUE&quot;}]})
-print(model_run)
-results = json.loads(model_run.text)
-print(results)</code></pre>
-<p><strong>Cloud Access through Linux Bash</strong></p>
-<p>In Ubuntu, you can call the API with <code>curl</code>:</p>
-<pre><code>curl \
--X POST \
--H &quot;x-prism-auth-user: REPLACE_WITH_API_KEY&quot; \
--H &quot;Content-Type: application/json&quot; \
--d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;ID&quot;: &quot;10001&quot;,&quot;male&quot;: 1,&quot;age&quot;: 57,&quot;smoker&quot;: 0,&quot;oxygen&quot;: 0,&quot;statin&quot;: 0,&quot;LAMA&quot;: 1,&quot;LABA&quot;: 1,&quot;ICS&quot;: 1,&quot;FEV1&quot;: 51,&quot;BMI&quot;: 18,&quot;SGRQ&quot;: 63,&quot;LastYrExacCount&quot;: 2,&quot;LastYrSevExacCount&quot;: 1,&quot;randomized_azithromycin&quot;: 0,&quot;randomized_statin&quot;: 0,&quot;randomized_LAMA&quot;: 0,&quot;randomized_LABA&quot;: 0,&quot;randomized_ICS&quot;: 0, &quot;random_sampling_N&quot; : 1000, &quot;random_distribution_iteration&quot; : 20000, &quot;calculate_CIs&quot; : &quot;TRUE&quot;}]}&#39; \
-https://prism.peermodelsnetwork.com/route/accept/run</code></pre>
-</div>
-<div id="fev1-1" class="section level2">
-<h2><span class="header-section-number">12.2</span> FEV1</h2>
-<p><strong>Cloud Access through Linux Bash</strong></p>
-<p>In Ubuntu, you can call the API with <code>curl</code>:</p>
-<pre><code>curl \
--X POST \
--H &quot;x-prism-auth-user: REPLACE_WITH_API_KEY&quot; \
--H &quot;Content-Type: application/json&quot; \
--d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;male&quot;:1,&quot;age&quot;:70,&quot;smoker&quot;:1,&quot;FEV1&quot;:2.5,&quot;height&quot;:1.68,&quot;weight&quot;:65}]}&#39; \
-https://prism.peermodelsnetwork.com/route/fev1/run
-</code></pre>
+<div id="codexcopd" class="section level1">
+<h1><span class="header-section-number">6</span> CODEXCOPD</h1>
+<table>
+<colgroup>
+<col width="48%" />
+<col width="51%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Model Name</td>
+<td>The CODEX (comorbidity, obstruction, dyspnea, and previous severe exacerbations) Index</td>
+</tr>
+<tr class="even">
+<td>Modelling Team</td>
+<td>Almagro et al.</td>
+</tr>
+<tr class="odd">
+<td>Publication</td>
+<td><a href="https://doi.org/10.1378/chest.13-1328">10.1378/chest.13-1328</a></td>
+</tr>
+<tr class="even">
+<td>Outcome</td>
+<td>Survival and readmission at both 3 months and 1 year after hospital discharge for a COPD exacerbation</td>
+</tr>
+<tr class="odd">
+<td>R Package</td>
+<td><a href="https://github.com/resplab/codexcopd">codexcopd</a></td>
+</tr>
+<tr class="even">
+<td>API User Guide</td>
+<td><a href="https://resplab.github.io/prismguide/api-users-guide.html#codexcopd-1">Link</a></td>
+</tr>
+</tbody>
+</table>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="qrisk3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="chdwilson.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="covidseir.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
