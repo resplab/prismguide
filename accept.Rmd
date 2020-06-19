@@ -1,0 +1,72 @@
+# ACCEPT
+
+**Model Name:** Acute COPD Exacerbation Prediction Tool (ACCEPT)
+
+**Modelling team:** Respiratory Evaluation Sciences Program (RESP), at the Faculty of Pharmaceutical Sciences at the University of British Columbia [http://resp.core.ubc.ca](http://resp.core.ubc.ca)
+
+**Link to published manuscript, pre-print, or other report:** Adibi A, Sin DD, Safari A, Jonhson KM, Aaron SD, FitzGerald JM, Sadatsafavi M. The Acute COPD Exacerbation Prediction Tool (ACCEPT): a modelling study. The Lancet Respiratory Medicine. Published Online First 2020 March 13th; [https://doi.org/10.1016/S2213-2600(19)30397-2](doi:10.1016/S2213-2600(19)30397-2)
+
+**Purpose of the model:** To predict probably, rate, and severity of COPD exacerbations within the next year. 
+
+**Outcome measure:**
+
+**Predictors:**
+
+<!--
+**Known data quality issues:**
+
+
+**Other limitations:**
+
+
+**Stakeholders:**
+-->
+
+**Model companion video(s): **[https://www.peermodelsnetwork.com/educational-videos#](The ACCEPT Model in 90 Seconds)
+
+**Interview with modeller:**
+
+
+**Interview with stakeholder(s) or other media coverage**
+
+
+**Number of Validations:** 1
+
+**Mesh Terms:**
+
+## Cloud-based API Acess:
+
+[Peer Models Network](http://prism.resp.core.ubc.ca) allows users to access ACCEPT through the cloud. 
+
+##### Microsoft Excel
+
+A MACRO-enabled Excel-file can be used to interact with the model and see the results. To download the PRISM Excel template file for ACCEPT, please refer to the [PRISM model repository](http://resp.core.ubc.ca/ipress/prism).
+
+##### R
+
+##### Python
+```
+import json
+import requests
+url = 'https://prism.peermodelsnetwork.com/route/accept/run'
+headers = {'x-prism-auth-user': YOUR_API_KEY}
+model_run = requests.post(url, headers=headers,
+json = {"func":["prism_model_run"],"model_input":[{"ID": "10001","male": 1,"age": 57,"smoker": 0,"oxygen": 0,"statin": 0,"LAMA": 1,"LABA": 1,"ICS": 1,"FEV1": 51,"BMI": 18,"SGRQ": 63,"LastYrExacCount": 2,"LastYrSevExacCount": 1,"randomized_azithromycin": 0,"randomized_statin": 0,"randomized_LAMA": 0,"randomized_LABA": 0,"randomized_ICS": 0, "random_sampling_N" : 1000, "random_distribution_iteration" : 20000, "calculate_CIs" : "TRUE"}]})
+print(model_run)
+results = json.loads(model_run.text)
+print(results)
+```
+
+##### Linux Bash
+
+In Ubuntu, you can call the API with `curl`:
+
+```
+curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"ID": "10001","male": 1,"age": 57,"smoker": 0,"oxygen": 0,"statin": 0,"LAMA": 1,"LABA": 1,"ICS": 1,"FEV1": 51,"BMI": 18,"SGRQ": 63,"LastYrExacCount": 2,"LastYrSevExacCount": 1,"randomized_azithromycin": 0,"randomized_statin": 0,"randomized_LAMA": 0,"randomized_LABA": 0,"randomized_ICS": 0, "random_sampling_N" : 1000, "random_distribution_iteration" : 20000, "calculate_CIs" : "TRUE"}]}' \
+https://prism.peermodelsnetwork.com/route/accept/run
+```
+

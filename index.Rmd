@@ -1,0 +1,15 @@
+--- 
+title: "Models on the Peer Models Network"
+author: "Amin Adibi, Stephanie Harvard, Mohsen Sadatsafavi"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "User guide for accessing models hosted on the Peer Models Network cloud."
+---
+
+# Introduction
+
+This user guide includes information about models hosted on the Peer Models Network. 
