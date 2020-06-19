@@ -1,0 +1,12 @@
+# EPIC
+
+| Field         | Value         |
+| ------------- |-------------- |
+| Model Name    | Evaluation Platform in COPD (EPIC)       |
+| Modelling Team| [RESP](http://resp.core.ubc.ca)|
+| Publication   | [doi:10.1177%2F0272989X18824098](https://doi.org/10.1177%2F0272989X18824098)|
+| Outcome       | Patient-level outcomes, as well as overall mortality, prevalence, QALYs, costs, etc.|
+| Video         | [The EPIC Model in 2 Minutes](https://www.peermodelsnetwork.com/educational-videos?wix-vod-video-id=b394fa69ae404fdeb2ceae17f308fbea&wix-vod-comp-id=comp-k8q9lys1)|
+| R Package     | [epicR](https://github.com/resplab/epicR)|
+| Excel Sheet   | Being Updated |
+| API User Guide| Link          |

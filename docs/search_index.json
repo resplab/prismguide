@@ -1,3 +1,5 @@
 [
-["index.html", "Models on the Peer Models Network 1 Introduction", " Models on the Peer Models Network Amin Adibi, Stephanie Harvard, Mohsen Sadatsafavi 2020-06-19 1 Introduction This user guide includes information about models hosted on the Peer Models Network. "]
+["index.html", "Models on the Peer Models Network 1 Introduction", " Models on the Peer Models Network Amin Adibi, Stephanie Harvard, Mohsen Sadatsafavi 2020-06-19 1 Introduction This user guide includes information about models hosted on the Peer Models Network. "],
+["accept.html", "2 ACCEPT", " 2 ACCEPT Field Value Model Name Acute COPD Exacerbation Prediction Tool (ACCEPT) Modelling Team RESP Publication doi:10.1016/S2213-2600(19)30397-2 Purpose Predict probability, rate, and severity of COPD exacerbations Video The ACCEPT Model in 90 Seconds Interviews Amin Adibi on ACCEPT Media COPD exacerbations: finally, a more than ACCEPTable risk score Web App ACCEPT web App R Package accept Excel Sheet Being Updated API User Guide Link "],
+["epic.html", "3 EPIC", " 3 EPIC Field Value Model Name Evaluation Platform in COPD (EPIC) Modelling Team RESP Publication doi:10.1177%2F0272989X18824098 Outcome Patient-level outcomes. Video The EPIC Model in 2 Minutes R Package epicR Excel Sheet Being Updated API User Guide Link "]
 ]
