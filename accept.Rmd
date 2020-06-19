@@ -4,15 +4,15 @@
 
 **Modelling team:** Respiratory Evaluation Sciences Program (RESP), at the Faculty of Pharmaceutical Sciences at the University of British Columbia [http://resp.core.ubc.ca](http://resp.core.ubc.ca)
 
-**Link to published manuscript, pre-print, or other report:** Adibi A, Sin DD, Safari A, Jonhson KM, Aaron SD, FitzGerald JM, Sadatsafavi M. The Acute COPD Exacerbation Prediction Tool (ACCEPT): a modelling study. The Lancet Respiratory Medicine. Published Online First 2020 March 13th; [https://doi.org/10.1016/S2213-2600(19)30397-2](doi:10.1016/S2213-2600(19)30397-2)
+**Link to published manuscript, pre-print, or other report:** Adibi A, Sin DD, Safari A, Jonhson KM, Aaron SD, FitzGerald JM, Sadatsafavi M. The Acute COPD Exacerbation Prediction Tool (ACCEPT): a modelling study. The Lancet Respiratory Medicine. Published Online First 2020 March 13th; [doi:10.1016/S2213-2600(19)30397-2](https://doi.org/10.1016/S2213-2600(19)30397-2)
 
 **Purpose of the model:** To predict probably, rate, and severity of COPD exacerbations within the next year. 
 
-**Outcome measure:**
+**Outcome measure:** Probability and rate of all and severe exacerbations within the next year. 
 
-**Predictors:**
+<!--**Predictors:** 
 
-<!--
+
 **Known data quality issues:**
 
 
@@ -22,29 +22,42 @@
 **Stakeholders:**
 -->
 
-**Model companion video(s): **[https://www.peermodelsnetwork.com/educational-videos#](The ACCEPT Model in 90 Seconds)
+**Model companion video(s): **[The ACCEPT Model in 90 Seconds](https://www.peermodelsnetwork.com/educational-videos?wix-vod-video-id=679cbb410686401193779a2931731c56&wix-vod-comp-id=comp-k8q9lys1)
 
-**Interview with modeller:**
+**Interview with modeller:** Read the interview with Amin Adibi on Peer Models Network [blog](peermodelsnetwork.com/blog).
 
+**Interview with stakeholder(s) or other media coverage:**
 
-**Interview with stakeholder(s) or other media coverage**
+Lancet Respiratory Medicine: [COPD exacerbations: finally, a more than ACCEPTable risk score](https://doi.org/10.1016/S2213-2600(20)30049-7)
 
-
+<!--
 **Number of Validations:** 1
 
 **Mesh Terms:**
+-->
+## How to Access the Model
 
-## Cloud-based API Acess:
+ACCEPT is available as a [web app](http://resp.core.ubc.ca/ipress/accept) and an [R package](https://cran.r-project.org/package=accept). Additionally, users can access ACCEPT on the Peer Model Network's cloud.
 
-[Peer Models Network](http://prism.resp.core.ubc.ca) allows users to access ACCEPT through the cloud. 
+Additionally, the [Peer Models Network](http://prism.resp.core.ubc.ca) allows users to access ACCEPT through the cloud through Microsoft Excel, R, Python, JavaScript, Linux bash and any other platform that supports modern APIs. 
 
-##### Microsoft Excel
+__Microsoft Excel__
 
 A MACRO-enabled Excel-file can be used to interact with the model and see the results. To download the PRISM Excel template file for ACCEPT, please refer to the [PRISM model repository](http://resp.core.ubc.ca/ipress/prism).
 
-##### R
+__Cloud Access through R__
 
-##### Python
+User's can access models on the Peer Models Network using the `peermodels` R package, available on [GitHub](https://github.com/resplab/peermodels). The following code snippet illustrates how you can run the model for example patients provided in the `accept` package:
+
+```
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("accept", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
+```
+
+__Cloud Access through Python__
 ```
 import json
 import requests
@@ -57,7 +70,7 @@ results = json.loads(model_run.text)
 print(results)
 ```
 
-##### Linux Bash
+__Cloud Access through Linux Bash__
 
 In Ubuntu, you can call the API with `curl`:
 

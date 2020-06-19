@@ -94,39 +94,44 @@ This user guide includes information about models hosted on the Peer Models Netw
 
 \textbf{Modelling team:} Respiratory Evaluation Sciences Program (RESP), at the Faculty of Pharmaceutical Sciences at the University of British Columbia \url{http://resp.core.ubc.ca}
 
-\textbf{Link to published manuscript, pre-print, or other report:} Adibi A, Sin DD, Safari A, Jonhson KM, Aaron SD, FitzGerald JM, Sadatsafavi M. The Acute COPD Exacerbation Prediction Tool (ACCEPT): a modelling study. The Lancet Respiratory Medicine. Published Online First 2020 March 13th; \href{doi:10.1016/S2213-2600(19)30397-2}{https://doi.org/10.1016/S2213-2600(19)30397-2}
+\textbf{Link to published manuscript, pre-print, or other report:} Adibi A, Sin DD, Safari A, Jonhson KM, Aaron SD, FitzGerald JM, Sadatsafavi M. The Acute COPD Exacerbation Prediction Tool (ACCEPT): a modelling study. The Lancet Respiratory Medicine. Published Online First 2020 March 13th; \href{https://doi.org/10.1016/S2213-2600(19)30397-2}{doi:10.1016/S2213-2600(19)30397-2}
 
 \textbf{Purpose of the model:} To predict probably, rate, and severity of COPD exacerbations within the next year.
 
-\textbf{Outcome measure:}
+\textbf{Outcome measure:} Probability and rate of all and severe exacerbations within the next year.
 
-\textbf{Predictors:}
+\textbf{Model companion video(s): }\href{https://www.peermodelsnetwork.com/educational-videos?wix-vod-video-id=679cbb410686401193779a2931731c56\&wix-vod-comp-id=comp-k8q9lys1}{The ACCEPT Model in 90 Seconds}
 
-\textbf{Model companion video(s): }\href{The\%20ACCEPT\%20Model\%20in\%2090\%20Seconds}{https://www.peermodelsnetwork.com/educational-videos\#}
+\textbf{Interview with modeller:} Read the interview with Amin Adibi on Peer Models Network \href{peermodelsnetwork.com/blog}{blog}.
 
-\textbf{Interview with modeller:}
+\textbf{Interview with stakeholder(s) or other media coverage:}
 
-\textbf{Interview with stakeholder(s) or other media coverage}
+Lancet Respiratory Medicine: \href{https://doi.org/10.1016/S2213-2600(20)30049-7}{COPD exacerbations: finally, a more than ACCEPTable risk score}
 
-\textbf{Number of Validations:} 1
+\hypertarget{how-to-access-the-model}{%
+\section{How to Access the Model}\label{how-to-access-the-model}}
 
-\textbf{Mesh Terms:}
+ACCEPT is available as a \href{http://resp.core.ubc.ca/ipress/accept}{web app} and an \href{https://cran.r-project.org/package=accept}{R package}. Additionally, users can access ACCEPT on the Peer Model Network's cloud.
 
-\hypertarget{cloud-based-api-acess}{%
-\section{Cloud-based API Acess:}\label{cloud-based-api-acess}}
+Additionally, the \href{http://prism.resp.core.ubc.ca}{Peer Models Network} allows users to access ACCEPT through the cloud through Microsoft Excel, R, Python, JavaScript, Linux bash and any other platform that supports modern APIs.
 
-\href{http://prism.resp.core.ubc.ca}{Peer Models Network} allows users to access ACCEPT through the cloud.
-
-\hypertarget{microsoft-excel}{%
-\paragraph{Microsoft Excel}\label{microsoft-excel}}
+\textbf{Microsoft Excel}
 
 A MACRO-enabled Excel-file can be used to interact with the model and see the results. To download the PRISM Excel template file for ACCEPT, please refer to the \href{http://resp.core.ubc.ca/ipress/prism}{PRISM model repository}.
 
-\hypertarget{r}{%
-\paragraph{R}\label{r}}
+\textbf{Cloud Access through R}
 
-\hypertarget{python}{%
-\paragraph{Python}\label{python}}
+User's can access models on the Peer Models Network using the \texttt{peermodels} R package, available on \href{https://github.com/resplab/peermodels}{GitHub}. The following code snippet illustrates how you can run the model for example patients provided in the \texttt{accept} package:
+
+\begin{verbatim}
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("accept", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
+\end{verbatim}
+
+\textbf{Cloud Access through Python}
 
 \begin{verbatim}
 import json
@@ -140,8 +145,7 @@ results = json.loads(model_run.text)
 print(results)
 \end{verbatim}
 
-\hypertarget{linux-bash}{%
-\paragraph{Linux Bash}\label{linux-bash}}
+\textbf{Cloud Access through Linux Bash}
 
 In Ubuntu, you can call the API with \texttt{curl}:
 
