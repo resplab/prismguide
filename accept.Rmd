@@ -12,7 +12,7 @@
 | Web App       | [ACCEPT web App](http://resp.core.ubc.ca/ipress/accept)|
 | R Package     | [accept](https://cran.r-project.org/package=accept)|
 | Excel Sheet   | Being Updated |
-| API User Guide| [Link] (http://127.0.0.1:33413/rmd_output/0/qrisk3.html#api-users-guide)          |
+| API User Guide| [Link] (https://resplab.github.io/prismguide/api-users-guide.html#accept-1)          |
 
 
 <!--

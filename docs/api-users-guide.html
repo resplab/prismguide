@@ -83,6 +83,7 @@
 <li class="chapter" data-level="11" data-path="qrisk3.html"><a href="qrisk3.html"><i class="fa fa-check"></i><b>11</b> QRISK3</a></li>
 <li class="chapter" data-level="12" data-path="api-users-guide.html"><a href="api-users-guide.html"><i class="fa fa-check"></i><b>12</b> API Users’ Guide</a><ul>
 <li class="chapter" data-level="12.1" data-path="api-users-guide.html"><a href="api-users-guide.html#accept-1"><i class="fa fa-check"></i><b>12.1</b> ACCEPT</a></li>
+<li class="chapter" data-level="12.2" data-path="api-users-guide.html"><a href="api-users-guide.html#fev1-1"><i class="fa fa-check"></i><b>12.2</b> FEV1</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://www.peermodelsnetwork.com" target="blank">Peer Models Network</a></li>
@@ -133,6 +134,18 @@ print(results)</code></pre>
 -H &quot;Content-Type: application/json&quot; \
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;ID&quot;: &quot;10001&quot;,&quot;male&quot;: 1,&quot;age&quot;: 57,&quot;smoker&quot;: 0,&quot;oxygen&quot;: 0,&quot;statin&quot;: 0,&quot;LAMA&quot;: 1,&quot;LABA&quot;: 1,&quot;ICS&quot;: 1,&quot;FEV1&quot;: 51,&quot;BMI&quot;: 18,&quot;SGRQ&quot;: 63,&quot;LastYrExacCount&quot;: 2,&quot;LastYrSevExacCount&quot;: 1,&quot;randomized_azithromycin&quot;: 0,&quot;randomized_statin&quot;: 0,&quot;randomized_LAMA&quot;: 0,&quot;randomized_LABA&quot;: 0,&quot;randomized_ICS&quot;: 0, &quot;random_sampling_N&quot; : 1000, &quot;random_distribution_iteration&quot; : 20000, &quot;calculate_CIs&quot; : &quot;TRUE&quot;}]}&#39; \
 https://prism.peermodelsnetwork.com/route/accept/run</code></pre>
+</div>
+<div id="fev1-1" class="section level2">
+<h2><span class="header-section-number">12.2</span> FEV1</h2>
+<p><strong>Cloud Access through Linux Bash</strong></p>
+<p>In Ubuntu, you can call the API with <code>curl</code>:</p>
+<pre><code>curl \
+-X POST \
+-H &quot;x-prism-auth-user: REPLACE_WITH_API_KEY&quot; \
+-H &quot;Content-Type: application/json&quot; \
+-d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;male&quot;:1,&quot;age&quot;:70,&quot;smoker&quot;:1,&quot;FEV1&quot;:2.5,&quot;height&quot;:1.68,&quot;weight&quot;:65}]}&#39; \
+https://prism.peermodelsnetwork.com/route/fev1/run
+</code></pre>
 
 </div>
 </div>

@@ -152,7 +152,7 @@ Being Updated\strut
 \begin{minipage}[t]{0.45\columnwidth}\raggedright
 API User Guide\strut
 \end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
-{[}Link{]} (\url{http://127.0.0.1:33413/rmd_output/0/qrisk3.html\#api-users-guide})\strut
+{[}Link{]} (\url{https://resplab.github.io/prismguide/api-users-guide.html\#accept-1})\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
@@ -506,6 +506,22 @@ curl \
 -H "Content-Type: application/json" \
 -d '{"func":["prism_model_run"],"model_input":[{"ID": "10001","male": 1,"age": 57,"smoker": 0,"oxygen": 0,"statin": 0,"LAMA": 1,"LABA": 1,"ICS": 1,"FEV1": 51,"BMI": 18,"SGRQ": 63,"LastYrExacCount": 2,"LastYrSevExacCount": 1,"randomized_azithromycin": 0,"randomized_statin": 0,"randomized_LAMA": 0,"randomized_LABA": 0,"randomized_ICS": 0, "random_sampling_N" : 1000, "random_distribution_iteration" : 20000, "calculate_CIs" : "TRUE"}]}' \
 https://prism.peermodelsnetwork.com/route/accept/run
+\end{verbatim}
+
+\hypertarget{fev1-1}{%
+\section{FEV1}\label{fev1-1}}
+
+\textbf{Cloud Access through Linux Bash}
+
+In Ubuntu, you can call the API with \texttt{curl}:
+
+\begin{verbatim}
+curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"male":1,"age":70,"smoker":1,"FEV1":2.5,"height":1.68,"weight":65}]}' \
+https://prism.peermodelsnetwork.com/route/fev1/run
 \end{verbatim}
 
   \bibliography{book.bib,packages.bib}
