@@ -7,4 +7,4 @@
 | Publication   | [10.1161/01.CIR.97.18.1837](https://doi.org/10.1161/01.CIR.97.18.1837)|
 | Outcome       | Coronary Heart Disease |
 | R Package     | [chdwilson](https://github.com/resplab/chdwilson)|
-| API User Guide| Link          |
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#chdwilson-1)          |

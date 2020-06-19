@@ -9,4 +9,4 @@
 | Video         | []()|
 | Web App       | [FEV1 web App](http://resp.core.ubc.ca/ipress/FEV1Pred)|
 | R Package     | [fev1](https://github.com/resplab/fev1)|
-| API User Guide| Link          |
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#fev1-1)          |

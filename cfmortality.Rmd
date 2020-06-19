@@ -8,4 +8,4 @@
 | Outcome       | Mortality Risk |
 | Video         | []()|
 | R Package     | [cfmortality](https://cran.r-project.org/package=cfmortality)|
-| API User Guide| Link          |
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#cfmortality-1)          |

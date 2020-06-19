@@ -9,4 +9,4 @@
 | Video         | [The EPIC Model in 2 Minutes](https://www.peermodelsnetwork.com/educational-videos?wix-vod-video-id=b394fa69ae404fdeb2ceae17f308fbea&wix-vod-comp-id=comp-k8q9lys1)|
 | R Package     | [epicR](https://github.com/resplab/epicR)|
 | Excel Sheet   | Being Updated |
-| API User Guide| Link          |
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#epic-1)          |
