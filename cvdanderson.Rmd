@@ -1,0 +1,10 @@
+# CVDAnderson
+
+| Field         | Value         |
+| ------------- |-------------- |
+| Model Name    | Prediction of Coronary Heart Disease Using Risk Factor Categories |
+| Modelling Team| Anderson et al.|
+| Publication   | [10.1016/0002-8703(91)90861-B](https://doi.org/10.1016/0002-8703(91)90861-B)|
+| Outcome       | CHD, MI, CHD Mortality, Stroke, CVD, CVD Mortalitye |
+| R Package     | [cvdanderson](https://github.com/resplab/cvdanderson)|
+| API User Guide| Link          |

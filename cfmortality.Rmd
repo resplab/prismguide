@@ -1,0 +1,11 @@
+# CFMortality
+
+| Field         | Value         |
+| ------------- |-------------- |
+| Model Name    | Mortality prediction models in cystic fibrosis |
+| Modelling Team| Stanojevic et al.|
+| Publication   | [10.1183/13993003.00224-2019](https://doi.org/10.1183/13993003.00224-2019)|
+| Outcome       | Mortality Risk |
+| Video         | []()|
+| R Package     | [cfmortality](https://cran.r-project.org/package=cfmortality)|
+| API User Guide| Link          |

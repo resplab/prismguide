@@ -1,0 +1,10 @@
+# COVIDSEIR
+
+| Field         | Value         |
+| ------------- |-------------- |
+| Model Name    | Bayesian SEIR model to estimate physical-distancing effects |
+| Modelling Team| Anderson et al.|
+| Publication   | [10.1101/2020.04.17.20070086](https://doi.org/10.1101/2020.04.17.20070086)|
+| Outcome       | COVID-19 Cases |
+| R Package     | [covidseir](https://github.com/seananderson/covidseir)|
+| API User Guide| Link          |

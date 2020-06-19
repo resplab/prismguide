@@ -1,0 +1,10 @@
+# BODE
+
+| Field         | Value         |
+| ------------- |-------------- |
+| Model Name    | The Body-Mass Index, Airflow Obstruction, Dyspnea, and Exercise Capacity Index |
+| Modelling Team| Celli et al.|
+| Publication   | [10.1056/NEJMoa021322](https://doi.org/10.1056/NEJMoa021322)|
+| Outcome       | Mortality Risk |
+| R Package     | [bode](https://github.com/resplab/bode)|
+| API User Guide| Link          |

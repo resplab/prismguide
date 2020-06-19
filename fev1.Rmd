@@ -1,0 +1,12 @@
+# FEV1
+
+| Field         | Value         |
+| ------------- |-------------- |
+| Model Name    | Individualized prediction of lung-function decline in COPD |
+| Modelling Team| [RESP](http://resp.core.ubc.ca)|
+| Publication   | [doi:10.1503/cmaj.151483](https://doi.org/10.1503/cmaj.151483)|
+| Outcome       | fev1 |
+| Video         | []()|
+| Web App       | [FEV1 web App](http://resp.core.ubc.ca/ipress/FEV1Pred)|
+| R Package     | [fev1](https://github.com/resplab/fev1)|
+| API User Guide| Link          |

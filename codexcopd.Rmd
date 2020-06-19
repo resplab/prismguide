@@ -1,0 +1,10 @@
+# CODEX
+
+| Field         | Value         |
+| ------------- |-------------- |
+| Model Name    | The CODEX (comorbidity, obstruction, dyspnea, and previous severe exacerbations) Index |
+| Modelling Team| Almagro et al.|
+| Publication   | [10.1378/chest.13-1328](https://doi.org/10.1378/chest.13-1328)|
+| Outcome       | Survival and readmission at both 3 months and 1 year after hospital discharge for a COPD exacerbation |
+| R Package     | [covidseir](https://github.com/resplab/codexcopd)|
+| API User Guide| Link          |
