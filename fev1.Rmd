@@ -8,5 +8,6 @@
 | Outcome       | fev1 |
 | Video         | []()|
 | Web App       | [FEV1 web App](http://resp.core.ubc.ca/ipress/FEV1Pred)|
+| Excel Sheet   | [PC Version](https://drive.google.com/uc?export=download&id=1--OGtwrKHuQeUqaYMQ3CISvnTODQbF_I) |
 | R Package     | [fev1](https://github.com/resplab/fev1)|
 | API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#fev1-1)          |

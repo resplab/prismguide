@@ -11,9 +11,8 @@
 | Media         | [COPD exacerbations: finally, a more than ACCEPTable risk score](https://doi.org/10.1016/S2213-2600(20)30049-7)|
 | Web App       | [ACCEPT web App](http://resp.core.ubc.ca/ipress/accept)|
 | R Package     | [accept](https://cran.r-project.org/package=accept)|
-| Excel Sheet   | Being Updated |
+| Excel Sheet   | [PC Version](https://drive.google.com/uc?export=download&id=1NNE7pKBVP939tly-6JISaVw-y33m8y28) |
 | API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#accept-1)          |
-
 
 <!--
 

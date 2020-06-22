@@ -6,5 +6,6 @@
 | Modelling Team| Wilson et al.|
 | Publication   | [10.1161/01.CIR.97.18.1837](https://doi.org/10.1161/01.CIR.97.18.1837)|
 | Outcome       | Coronary Heart Disease |
+| Excel Sheet   | [PC Version](https://drive.google.com/uc?export=download&id=18RcG1yHeobxNw7T7m_dnF_5VDIz1ty--) |
 | R Package     | [chdwilson](https://github.com/resplab/chdwilson)|
 | API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#chdwilson-1)          |
