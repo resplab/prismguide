@@ -400,8 +400,7 @@ Field & Value\tabularnewline
 Model Name & Individualized prediction of lung-function decline in COPD\tabularnewline
 Modelling Team & \href{http://resp.core.ubc.ca}{RESP}\tabularnewline
 Publication & \href{https://doi.org/10.1503/cmaj.151483}{doi:10.1503/cmaj.151483}\tabularnewline
-Outcome & fev1\tabularnewline
-Video & \href{}{}\tabularnewline
+Outcome & Lung function over next 11 years\tabularnewline
 Web App & \href{http://resp.core.ubc.ca/ipress/FEV1Pred}{FEV1 web App}\tabularnewline
 Excel Sheet & \href{https://drive.google.com/uc?export=download\&id=1--OGtwrKHuQeUqaYMQ3CISvnTODQbF_I}{PC Version}\tabularnewline
 R Package & \href{https://github.com/resplab/fev1}{fev1}\tabularnewline
@@ -434,7 +433,7 @@ API User Guide & \href{https://resplab.github.io/prismguide/api-users-guide.html
 
 \textbf{Cloud Access through R}
 
-User's can access models on the Peer Models Network using the \texttt{peermodels} R package, available on \href{https://github.com/resplab/peermodels}{GitHub}. The following code snippet illustrates how you can run the model for example patients provided in the \texttt{accept} package:
+Users can access models on the Peer Models Network using the \texttt{peermodels} R package, available on \href{https://github.com/resplab/peermodels}{GitHub}. The following code snippet illustrates how you can run the model for example patients provided in the \texttt{accept} package:
 
 \begin{verbatim}
 remotes::install_github (resplab/peermodels)
@@ -485,6 +484,133 @@ curl \
 -H "Content-Type: application/json" \
 -d '{"func":["prism_model_run"],"model_input":[{"male":1,"age":70,"smoker":1,"FEV1":2.5,"height":1.68,"weight":65}]}' \
 https://prism.peermodelsnetwork.com/route/fev1/run
+\end{verbatim}
+
+\hypertarget{bode-1}{%
+\section{BODE}\label{bode-1}}
+
+\textbf{Cloud Access through R}
+
+Users can access models on the Peer Models Network using the \texttt{peermodels} R package, available on \href{https://github.com/resplab/peermodels}{GitHub}. The following code snippet illustrates how you can run the model for example patient provided in the \texttt{bode} package:
+
+\begin{verbatim}
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("bode", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
+\end{verbatim}
+
+\textbf{Cloud Access through Linux Bash}
+
+In Ubuntu, you can call the API with \texttt{curl}:
+
+\begin{verbatim}
+curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"FEV1": 40,"mMRC": 3,"BMI": 22,"walk": 100}]}' \
+https://prism.peermodelsnetwork.com/route/bode/run
+\end{verbatim}
+
+\hypertarget{cvdanderson-1}{%
+\section{CVDAnderson}\label{cvdanderson-1}}
+
+\textbf{Cloud Access through R}
+
+Users can access models on the Peer Models Network using the \texttt{peermodels} R package, available on \href{https://github.com/resplab/peermodels}{GitHub}. The following code snippet illustrates how you can run the model for example patient provided in the \texttt{cvdanderson} package:
+
+\begin{verbatim}
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("cvdanderson", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
+\end{verbatim}
+
+\textbf{Cloud Access through Linux Bash}
+
+In Ubuntu, you can call the API with \texttt{curl}:
+
+\begin{verbatim}
+curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"age": 33,"gender": 1,"Tchol": 230,"ECG_LVH": 0,"HDLchol": 48, "SBP": 135, "DBP": 88, "diabetes": 1, "smoker": 1, "t": 10}]}' \
+https://prism.peermodelsnetwork.com/route/cvdanderson/run
+\end{verbatim}
+
+\hypertarget{chdwilson-1}{%
+\section{CHDWilson}\label{chdwilson-1}}
+
+\textbf{Cloud Access through R}
+
+Users can access models on the Peer Models Network using the \texttt{peermodels} R package, available on \href{https://github.com/resplab/peermodels}{GitHub}. The following code snippet illustrates how you can run the model for example patient provided in the \texttt{chdwilson} package:
+
+\begin{verbatim}
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("chdwilson", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
+\end{verbatim}
+
+\textbf{Cloud Access through Linux Bash}
+
+In Ubuntu, you can call the API with \texttt{curl}:
+
+\begin{verbatim}
+curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"age": 55,"gender": 1,"TChol": 250,"LDL": 120,"HDL": 39, "SBP": 146, "DBP": 88, "diabetes": 0, "smoker": 1}]}' \
+https://prism.peermodelsnetwork.com/route/chdwilson/run
+\end{verbatim}
+
+\hypertarget{cfmortality-1}{%
+\section{CFmortality}\label{cfmortality-1}}
+
+\textbf{Cloud Access through R}
+
+Users can access models on the Peer Models Network using the \texttt{peermodels} R package, available on \href{https://github.com/resplab/peermodels}{GitHub}. The following code snippet illustrates how you can run the model for example patient provided in the \texttt{chdwilson} package:
+
+\begin{verbatim}
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("cfmortality", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
+\end{verbatim}
+
+\textbf{Cloud Access through Linux Bash}
+
+In Ubuntu, you can call the API with \texttt{curl}:
+
+\begin{verbatim}
+curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"male": 0,"age": 57,"fvc": 66.7,"fev1": 47.4,"fev1LastYear": 80.5,"bcepacia": 0,"underweight": 0,"nHosp": 0,"pancreaticInsufficient": 1,"CFRelatedDiabetes": 0,"ageAtDiagnosis": 0.9}]}' \
+https://prism.peermodelsnetwork.com/route/cfmortality/run
+\end{verbatim}
+
+\hypertarget{qrisk3-1}{%
+\section{QRISK3}\label{qrisk3-1}}
+
+\textbf{Cloud Access through R}
+
+Users can access models on the Peer Models Network using the \texttt{peermodels} R package, available on \href{https://github.com/resplab/peermodels}{GitHub}. The following code snippet illustrates how you can run the model for example patient provided in the \texttt{QRISK3} package:
+
+\begin{verbatim}
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("qrisk3", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
 \end{verbatim}
 
   \bibliography{book.bib,packages.bib}

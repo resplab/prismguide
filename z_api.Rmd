@@ -4,7 +4,7 @@
 
 __Cloud Access through R__
 
-User's can access models on the Peer Models Network using the `peermodels` R package, available on [GitHub](https://github.com/resplab/peermodels). The following code snippet illustrates how you can run the model for example patients provided in the `accept` package:
+Users can access models on the Peer Models Network using the `peermodels` R package, available on [GitHub](https://github.com/resplab/peermodels). The following code snippet illustrates how you can run the model for example patients provided in the `accept` package:
 
 ```
 remotes::install_github (resplab/peermodels)
@@ -54,4 +54,122 @@ curl \
 -d '{"func":["prism_model_run"],"model_input":[{"male":1,"age":70,"smoker":1,"FEV1":2.5,"height":1.68,"weight":65}]}' \
 https://prism.peermodelsnetwork.com/route/fev1/run
 
+```
+
+## BODE
+
+__Cloud Access through R__
+
+Users can access models on the Peer Models Network using the `peermodels` R package, available on [GitHub](https://github.com/resplab/peermodels). The following code snippet illustrates how you can run the model for example patient provided in the `bode` package:
+
+```
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("bode", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
+```
+
+__Cloud Access through Linux Bash__
+
+In Ubuntu, you can call the API with `curl`:
+
+```
+curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"FEV1": 40,"mMRC": 3,"BMI": 22,"walk": 100}]}' \
+https://prism.peermodelsnetwork.com/route/bode/run
+```
+## CVDAnderson
+
+__Cloud Access through R__
+
+Users can access models on the Peer Models Network using the `peermodels` R package, available on [GitHub](https://github.com/resplab/peermodels). The following code snippet illustrates how you can run the model for example patient provided in the `cvdanderson` package:
+
+```
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("cvdanderson", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
+```
+
+__Cloud Access through Linux Bash__
+
+In Ubuntu, you can call the API with `curl`:
+
+```
+curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"age": 33,"gender": 1,"Tchol": 230,"ECG_LVH": 0,"HDLchol": 48, "SBP": 135, "DBP": 88, "diabetes": 1, "smoker": 1, "t": 10}]}' \
+https://prism.peermodelsnetwork.com/route/cvdanderson/run
+```
+
+## CHDWilson
+
+__Cloud Access through R__
+
+Users can access models on the Peer Models Network using the `peermodels` R package, available on [GitHub](https://github.com/resplab/peermodels). The following code snippet illustrates how you can run the model for example patient provided in the `chdwilson` package:
+
+```
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("chdwilson", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
+```
+
+__Cloud Access through Linux Bash__
+
+In Ubuntu, you can call the API with `curl`:
+```
+curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"age": 55,"gender": 1,"TChol": 250,"LDL": 120,"HDL": 39, "SBP": 146, "DBP": 88, "diabetes": 0, "smoker": 1}]}' \
+https://prism.peermodelsnetwork.com/route/chdwilson/run
+```
+
+## CFmortality
+
+__Cloud Access through R__
+
+Users can access models on the Peer Models Network using the `peermodels` R package, available on [GitHub](https://github.com/resplab/peermodels). The following code snippet illustrates how you can run the model for example patient provided in the `chdwilson` package:
+
+```
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("cfmortality", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
+```
+
+__Cloud Access through Linux Bash__
+
+In Ubuntu, you can call the API with `curl`:
+```
+curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"male": 0,"age": 57,"fvc": 66.7,"fev1": 47.4,"fev1LastYear": 80.5,"bcepacia": 0,"underweight": 0,"nHosp": 0,"pancreaticInsufficient": 1,"CFRelatedDiabetes": 0,"ageAtDiagnosis": 0.9}]}' \
+https://prism.peermodelsnetwork.com/route/cfmortality/run
+```
+
+## QRISK3
+__Cloud Access through R__
+
+Users can access models on the Peer Models Network using the `peermodels` R package, available on [GitHub](https://github.com/resplab/peermodels). The following code snippet illustrates how you can run the model for example patient provided in the `QRISK3` package:
+
+```
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("qrisk3", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
 ```
