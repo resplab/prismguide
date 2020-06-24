@@ -1,5 +1,13 @@
 # API Users' Guide
 
+[Peer Models Network](https://www.peermodelsnetwork.com/) is an initiative to make models for healthcare decision-making accessible, transparent and interpretable to all British Columbians. With support from the Canada Foundation for Innovation, BC SUPPORT Unit and BC Academic Health Science Network, the Peer Models Network (PMN) aims to increase engagement between the modelling community and policymakers, interdisciplinary scholars, patients, journalists, and other members of the public.
+
+The PMN centres around a software infrastructure called the Programmable Interface for Statistical and Simulation Models (PRISM). PRISM hosts models on the cloud and provides standard Application Programming Interfaces (APIs) that allows users of different levels of technical backgrounds to interact with models hosted on a cloud. Users can submit queries to cloud-hosted models through a multitude of software platforms, including Microsoft Excel, R, Python, bash scripts, Javascript and custom web apps. This enables direct access to users who lack either the software or hardware infrastructure or the technical expertise to set up models on their own devices. It also enables more technical users to integrate modes with other pieces of softwar
+
+In its current implementation, PRISM can hosts models that are developed in R, including those that use `Cpp` and `STAN`. 
+
+Synchronous APIs calls are currently implemented and support for asynchronous calls that are required by extra long processing times is under active development. 
+
 ## ACCEPT
 
 __Cloud Access through R__
@@ -230,6 +238,11 @@ https://prism.peermodelsnetwork.com/route/codexcopd/run
 
 ## COVIDSEIR
 
+We have recently deployed the Bayesian SEIR model to estimate physical-distancing effects [developed by Anderson et al](https://doi.org/10.1101/2020.04.17.20070086) to our cloud infrastructure. The current version of the R package deployed to the PRISM server is `covidseir v0.0.0.9006`. 
+
+The current implementation of the `covidseir` package is experimental and has some limitations, given the computational intensity of the model.  Depending on the number of `chains` and `iterations`, the `html` connection might be dropped for calls that more than a dozen minutes. 
+Currently, fitting the model with default parameters takes about 5 minutes. We are actively working to implement asynchronous support which would email the results back to the user when hours long model runs are requested. 
+
 __Cloud Access through R__
 
 Users can access models on the Peer Models Network using the `peermodels` R package, available on [GitHub](https://github.com/resplab/peermodels). The following code snippet illustrates how you can run the model for example patient provided in the `covidseir` package:
@@ -245,7 +258,52 @@ names(results)
 draw_plots()
 ```
 
+The same workflow can be used to fit and run the model based on custom data. For example, the code snippet below, automatically downloads latest COVID-19 case numbers for British Columbia, and reruns the simulation using different assumptions. 
+
+```
+library(stringr)
+library(dplyr)
+library(tidyr)
+library(readr)
+library(lubridate)
+library(peermodels)
+
+url <- "https://docs.google.com/spreadsheets/d/1ad7-09_Jn6AxsdkVPE33T-iLfGpPRmd3piXQqFiVeas/export?&format=csv"
+
+CanadaCases <- read_csv(url)
+
+covidCases <-  CanadaCases %>% rename (name = "prname") %>% rename (Cases = "numconf")  %>% mutate(date=dmy(date)) %>%
+  filter (name!="Canada") %>% filter (date!=today())
+
+bcCases <- covidCases %>% filter (name == "British Columbia")
+
+connect_to_model("covidseir", api_key = "YDbxcnNHmf4XoteSmCFHKx", bypass_router = T)
+
+input <- get_default_input()
+first <- length(bcCases$numtoday)-42+1
+last <- length(bcCases$numtoday)
+input$daily_cases <- bcCases$numtoday[first:last]
+
+# Example assumed sampling fractions of positive cases:
+s1 <- c(rep(0.1, 13), rep(0.2, length(input$daily_cases) - 13))
+
+samp_frac_seg <- c(rep(1, 13), rep(2, length(input$daily_cases) - 13))
+s2 <- rep(0.07, length(input$daily_cases)) # Assuming 7\% of positive individuals are hospitalized
+
+input$samp_frac_fixed <- rep(0.1, length(input$daily_cases))
+
+input$fit_iter <- 100
+input$chains <- 1
+
+input$f_fixed <- rep(0.1, 90)
+results <- model_run(input)
+
+draw_plots()
+```
+
 __Cloud Access through Python__
+
+Users can use Python to access `covidseir` model on the cloud. The simple code snippet below runs the model with default inputs. 
 
 ```
 import json

@@ -115,6 +115,10 @@
             <section class="normal" id="section-">
 <div id="api-users-guide" class="section level1">
 <h1><span class="header-section-number">12</span> API Users’ Guide</h1>
+<p><a href="https://www.peermodelsnetwork.com/">Peer Models Network</a> is an initiative to make models for healthcare decision-making accessible, transparent and interpretable to all British Columbians. With support from the Canada Foundation for Innovation, BC SUPPORT Unit and BC Academic Health Science Network, the Peer Models Network (PMN) aims to increase engagement between the modelling community and policymakers, interdisciplinary scholars, patients, journalists, and other members of the public.</p>
+<p>The PMN centres around a software infrastructure called the Programmable Interface for Statistical and Simulation Models (PRISM). PRISM hosts models on the cloud and provides standard Application Programming Interfaces (APIs) that allows users of different levels of technical backgrounds to interact with models hosted on a cloud. Users can submit queries to cloud-hosted models through a multitude of software platforms, including Microsoft Excel, R, Python, bash scripts, Javascript and custom web apps. This enables direct access to users who lack either the software or hardware infrastructure or the technical expertise to set up models on their own devices. It also enables more technical users to integrate modes with other pieces of softwar</p>
+<p>In its current implementation, PRISM can hosts models that are developed in R, including those that use <code>Cpp</code> and <code>STAN</code>.</p>
+<p>Synchronous APIs calls are currently implemented and support for asynchronous calls that are required by extra long processing times is under active development.</p>
 <div id="accept-1" class="section level2">
 <h2><span class="header-section-number">12.1</span> ACCEPT</h2>
 <p><strong>Cloud Access through R</strong></p>
@@ -274,6 +278,9 @@ https://prism.peermodelsnetwork.com/route/codexcopd/run</code></pre>
 </div>
 <div id="covidseir-1" class="section level2">
 <h2><span class="header-section-number">12.10</span> COVIDSEIR</h2>
+<p>We have recently deployed the Bayesian SEIR model to estimate physical-distancing effects <a href="https://doi.org/10.1101/2020.04.17.20070086">developed by Anderson et al</a> to our cloud infrastructure. The current version of the R package deployed to the PRISM server is <code>covidseir v0.0.0.9006</code>.</p>
+<p>The current implementation of the <code>covidseir</code> package is experimental and has some limitations, given the computational intensity of the model. Depending on the number of <code>chains</code> and <code>iterations</code>, the <code>html</code> connection might be dropped for calls that more than a dozen minutes.
+Currently, fitting the model with default parameters takes about 5 minutes. We are actively working to implement asynchronous support which would email the results back to the user when hours long model runs are requested.</p>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>covidseir</code> package:</p>
 <pre><code>library(peermodels)
@@ -284,7 +291,47 @@ input$daily_cases
 results &lt;- model_run(input)
 names(results)
 draw_plots()</code></pre>
+<p>The same workflow can be used to fit and run the model based on custom data. For example, the code snippet below, automatically downloads latest COVID-19 case numbers for British Columbia, and reruns the simulation using different assumptions.</p>
+<pre><code>library(stringr)
+library(dplyr)
+library(tidyr)
+library(readr)
+library(lubridate)
+library(peermodels)
+
+url &lt;- &quot;https://docs.google.com/spreadsheets/d/1ad7-09_Jn6AxsdkVPE33T-iLfGpPRmd3piXQqFiVeas/export?&amp;format=csv&quot;
+
+CanadaCases &lt;- read_csv(url)
+
+covidCases &lt;-  CanadaCases %&gt;% rename (name = &quot;prname&quot;) %&gt;% rename (Cases = &quot;numconf&quot;)  %&gt;% mutate(date=dmy(date)) %&gt;%
+  filter (name!=&quot;Canada&quot;) %&gt;% filter (date!=today())
+
+bcCases &lt;- covidCases %&gt;% filter (name == &quot;British Columbia&quot;)
+
+connect_to_model(&quot;covidseir&quot;, api_key = &quot;YDbxcnNHmf4XoteSmCFHKx&quot;, bypass_router = T)
+
+input &lt;- get_default_input()
+first &lt;- length(bcCases$numtoday)-42+1
+last &lt;- length(bcCases$numtoday)
+input$daily_cases &lt;- bcCases$numtoday[first:last]
+
+# Example assumed sampling fractions of positive cases:
+s1 &lt;- c(rep(0.1, 13), rep(0.2, length(input$daily_cases) - 13))
+
+samp_frac_seg &lt;- c(rep(1, 13), rep(2, length(input$daily_cases) - 13))
+s2 &lt;- rep(0.07, length(input$daily_cases)) # Assuming 7\% of positive individuals are hospitalized
+
+input$samp_frac_fixed &lt;- rep(0.1, length(input$daily_cases))
+
+input$fit_iter &lt;- 100
+input$chains &lt;- 1
+
+input$f_fixed &lt;- rep(0.1, 90)
+results &lt;- model_run(input)
+
+draw_plots()</code></pre>
 <p><strong>Cloud Access through Python</strong></p>
+<p>Users can use Python to access <code>covidseir</code> model on the cloud. The simple code snippet below runs the model with default inputs.</p>
 <pre><code>import json
 import requests
 url = &#39;http://model-covidseir.cp.prism-ubc.linaralabs.com/ocpu/library/covidseirPrism/R/gateway/json&#39;
