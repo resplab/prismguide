@@ -287,9 +287,8 @@ draw_plots()</code></pre>
 <p><strong>Cloud Access through Python</strong></p>
 <pre><code>import json
 import requests
-api_key = &#39;YOUR_API_KEY&#39;
 url = &#39;http://model-covidseir.cp.prism-ubc.linaralabs.com/ocpu/library/covidseirPrism/R/gateway/json&#39;
-headers = {&#39;x-prism-auth-user&#39;: &#39;YDbxcnNHmf4XoteSmCFHKx&#39;}
+headers = {&#39;x-prism-auth-user&#39;: &#39;YOUR_API_KEY&#39;}
 default_input = requests.post(url, headers=headers,json = {&quot;func&quot;:[&quot;get_default_input&quot;]})
 # json_default_input = json.loads(default_input.json()[0]) # OR:
 json_default_input = json.loads(json.loads(default_input.text)[0])
