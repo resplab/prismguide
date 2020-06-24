@@ -250,9 +250,8 @@ __Cloud Access through Python__
 ```
 import json
 import requests
-api_key = 'YOUR_API_KEY'
 url = 'http://model-covidseir.cp.prism-ubc.linaralabs.com/ocpu/library/covidseirPrism/R/gateway/json'
-headers = {'x-prism-auth-user': 'YDbxcnNHmf4XoteSmCFHKx'}
+headers = {'x-prism-auth-user': 'YOUR_API_KEY'}
 default_input = requests.post(url, headers=headers,json = {"func":["get_default_input"]})
 # json_default_input = json.loads(default_input.json()[0]) # OR:
 json_default_input = json.loads(json.loads(default_input.text)[0])
