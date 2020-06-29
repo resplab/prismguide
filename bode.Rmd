@@ -6,5 +6,6 @@
 | Modelling Team| Celli et al.|
 | Publication   | [10.1056/NEJMoa021322](https://doi.org/10.1056/NEJMoa021322)|
 | Outcome       | Mortality Risk |
+| Excel Sheet   | [PC Version](https://drive.google.com/uc?export=download&id=14H_4NQzY4xqsRDu3ZnVzcJa8ym66aFyb) |
 | R Package     | [bode](https://github.com/resplab/bode)|
 | API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#bode-api)          |

@@ -6,6 +6,6 @@
 | Modelling Team| Stanojevic et al.|
 | Publication   | [10.1183/13993003.00224-2019](https://doi.org/10.1183/13993003.00224-2019)|
 | Outcome       | Mortality Risk |
-| Video         | []()|
+| Excel Sheet   | [PC Version](https://drive.google.com/uc?export=download&id=17cyol2PEHT5R3JMDPNNZ6khDQ6ICVmkq) |
 | R Package     | [cfmortality](https://cran.r-project.org/package=cfmortality)|
 | API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#cfmortality-api)          |
