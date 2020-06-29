@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.6.19)  28 JUN 2020 17:53
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.6.19)  28 JUN 2020 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -528,6 +528,9 @@ LaTeX Warning: Label `qrisk3' multiply defined.
 LaTeX Warning: Label `codexcopd' multiply defined.
 
 
+LaTeX Warning: Label `mmrcea' multiply defined.
+
+
 LaTeX Warning: Label `covidseir' multiply defined.
 
 )
@@ -1038,68 +1041,68 @@ Overfull \hbox (237.75pt too wide) in paragraph at lines 715--715
 arlson":8,"FEV1":40,"mMRC":3,"exacerbation":2}]}[] \[] 
  []
 
-
-Overfull \hbox (33.0pt too wide) in paragraph at lines 738--738
+[34]
+Overfull \hbox (33.0pt too wide) in paragraph at lines 767--767
 []\TU/lmtt/m/n/10 connect_to_model("covidseir", api_key = YOUR_API_KEY, bypass_
 router = T)[] 
  []
 
-[34]
-Overfull \hbox (237.75pt too wide) in paragraph at lines 781--781
+
+Overfull \hbox (237.75pt too wide) in paragraph at lines 810--810
 []\TU/lmtt/m/n/10 url <- "https://docs.google.com/spreadsheets/d/1ad7-09_Jn6Axs
 dkVPE33T-iLfGpPRmd3piXQqFiVeas/export?&format=csv"[] 
  []
 
 
-Overfull \hbox (274.5pt too wide) in paragraph at lines 781--781
+Overfull \hbox (274.5pt too wide) in paragraph at lines 810--810
 []\TU/lmtt/m/n/10 covidCases <-  CanadaCases %>% rename (name = "prname") %>% r
 ename (Cases = "numconf")  %>% mutate(date=dmy(date)) %>%[] 
  []
 
 
-Overfull \hbox (96.0pt too wide) in paragraph at lines 781--781
+Overfull \hbox (96.0pt too wide) in paragraph at lines 810--810
 []\TU/lmtt/m/n/10 connect_to_model("covidseir", api_key = "YDbxcnNHmf4XoteSmCFH
 Kx", bypass_router = T)[] 
  []
 
-
-Overfull \hbox (22.5pt too wide) in paragraph at lines 781--781
+[35]
+Overfull \hbox (22.5pt too wide) in paragraph at lines 810--810
 []\TU/lmtt/m/n/10 samp_frac_seg <- c(rep(1, 13), rep(2, length(input$daily_case
 s) - 13))[] 
  []
 
 
-Overfull \hbox (169.5pt too wide) in paragraph at lines 781--781
+Overfull \hbox (169.5pt too wide) in paragraph at lines 810--810
 []\TU/lmtt/m/n/10 s2 <- rep(0.07, length(input$daily_cases)) # Assuming 7\% of 
 positive individuals are hospitalized[] 
  []
 
 
-Overfull \hbox (185.25pt too wide) in paragraph at lines 797--797
+Overfull \hbox (185.25pt too wide) in paragraph at lines 826--826
 []\TU/lmtt/m/n/10 url = []http://model-covidseir.cp.prism-ubc.linaralabs.com/oc
 pu/library/covidseirPrism/R/gateway/json[][] 
  []
 
 
-Overfull \hbox (122.25pt too wide) in paragraph at lines 797--797
+Overfull \hbox (122.25pt too wide) in paragraph at lines 826--826
 []\TU/lmtt/m/n/10 default_input = requests.post(url, headers=headers,json = {"f
 unc":["get_default_input"]})[] 
  []
 
-[35]
-Overfull \hbox (1.5pt too wide) in paragraph at lines 797--797
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 826--826
 []\TU/lmtt/m/n/10 json_default_input = json.loads(json.loads(default_input.text
 )[0])[] 
  []
 
 
-Overfull \hbox (264.0pt too wide) in paragraph at lines 797--797
+Overfull \hbox (264.0pt too wide) in paragraph at lines 826--826
 []\TU/lmtt/m/n/10 response = requests.post(url, headers=headers,json = {"func":
 ["prism_model_run"], "model_input":json_default_input})[] 
  []
 
 
-Overfull \hbox (10401.75pt too wide) in paragraph at lines 811--811
+Overfull \hbox (10401.75pt too wide) in paragraph at lines 840--840
 []\TU/lmtt/m/n/10 -d []{"func":["prism_model_run"],"model_input":{"daily_cases"
 :[0,0,1,3,1,8,0,6,5,0,7,7,18,9,22,38,53,45,40,77,76,48,67,78,42,66,67,92,16,70,
 43,53,55,53,29,26,37,25,45,34,40,35],"obs_model":["NB2","Poisson"],"fit_forecas
@@ -1130,28 +1133,28 @@ _cases":[0],"imported_window":[1],"f_seg":[0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
  []
 
 
-Overfull \hbox (143.25pt too wide) in paragraph at lines 811--811
+Overfull \hbox (143.25pt too wide) in paragraph at lines 840--840
 []\TU/lmtt/m/n/10 http://model-covidseir.cp.prism-ubc.linaralabs.com/ocpu/libra
 ry/covidseirPrism/R/gateway/json[] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 813.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 842.
 [36]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 813.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 842.
 (./prismGuide.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 813.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 813.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 842.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 842.
 Package rerunfilecheck Info: File `prismGuide.out' has not changed.
-(rerunfilecheck)             Checksum: 8C4365AD28455329A7088DC4EF30B172;2044.
+(rerunfilecheck)             Checksum: 358C915A36492BF84185F0387D775B65;2132.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 813.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 842.
  ) 
 Here is how much of TeX's memory you used:
  16944 strings out of 481244
  301365 string characters out of 5921895
- 722936 words of memory out of 5000000
+ 725936 words of memory out of 5000000
  34258 multiletter control sequences out of 15000+600000
  538781 words of font info for 76 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191

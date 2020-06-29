@@ -714,6 +714,35 @@ curl \
 https://prism.peermodelsnetwork.com/route/codexcopd/run
 \end{verbatim}
 
+\hypertarget{mmrcea}{%
+\section{MMRCEA}\label{mmrcea}}
+
+\textbf{Cloud Access through R}
+
+Users can access models on the Peer Models Network using the \texttt{peermodels} R package, available on \href{https://github.com/resplab/peermodels}{GitHub}. The following code snippet illustrates how you can run the model for example inputs provided by the modelling team:
+
+\begin{verbatim}
+library(peermodels)
+
+connect_to_model("mmrcea", api_key = YOUR_API_KEY)
+
+input <- get_default_input()
+
+input$timeHorizon                                    <- 5
+input$discountRate                                   <- 0.015
+input$averageFamilyReferred                          <- 2       
+input$familyReferredHCP                              <- 1     
+input$adherenceIntensiveScreening                    <- 0.9      
+input$crcmmrDefReferredHCPIntArm	                   <- 0.3   
+input$crcmmrDefReferredHCPmmrbrafCompArmVCHA         <-	0.3   
+input$crcmmrDefReferredHCPmmrCompArmVCHA	           <- 0.08  
+input$crcmmrDefReferredHCPmmrbrafCompArmVIHA         <- 0.08  
+input$crcmmrDefReferredHCPmmrCompArmOtherHA	         <- 0.08  
+input$ecmmrDefReferredHCPIntArm	                     <- 0.8   
+
+model_run(input)
+\end{verbatim}
+
 \hypertarget{covidseir}{%
 \section{COVIDSEIR}\label{covidseir}}
 

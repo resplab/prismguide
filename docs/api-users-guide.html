@@ -92,7 +92,8 @@
 <li class="chapter" data-level="13.7" data-path="cfmortality.html"><a href="cfmortality.html#cfmortality"><i class="fa fa-check"></i><b>13.7</b> CFMortality</a></li>
 <li class="chapter" data-level="13.8" data-path="qrisk3.html"><a href="qrisk3.html#qrisk3"><i class="fa fa-check"></i><b>13.8</b> QRISK3</a></li>
 <li class="chapter" data-level="13.9" data-path="codexcopd.html"><a href="codexcopd.html#codexcopd"><i class="fa fa-check"></i><b>13.9</b> CODEXCOPD</a></li>
-<li class="chapter" data-level="13.10" data-path="covidseir.html"><a href="covidseir.html#covidseir"><i class="fa fa-check"></i><b>13.10</b> COVIDSEIR</a></li>
+<li class="chapter" data-level="13.10" data-path="mmrcea.html"><a href="mmrcea.html#mmrcea"><i class="fa fa-check"></i><b>13.10</b> MMRCEA</a></li>
+<li class="chapter" data-level="13.11" data-path="covidseir.html"><a href="covidseir.html#covidseir"><i class="fa fa-check"></i><b>13.11</b> COVIDSEIR</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://www.peermodelsnetwork.com" target="blank">Peer Models Network</a></li>
@@ -273,8 +274,32 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;age&quot;:40,&quot;charlson&quot;:8,&quot;FEV1&quot;:40,&quot;mMRC&quot;:3,&quot;exacerbation&quot;:2}]}&#39; \
 https://prism.peermodelsnetwork.com/route/codexcopd/run</code></pre>
 </div>
+<div id="mmrcea" class="section level2">
+<h2><span class="header-section-number">13.10</span> MMRCEA</h2>
+<p><strong>Cloud Access through R</strong></p>
+<p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example inputs provided by the modelling team:</p>
+<pre><code>library(peermodels)
+
+connect_to_model(&quot;mmrcea&quot;, api_key = YOUR_API_KEY)
+
+input &lt;- get_default_input()
+
+input$timeHorizon                                    &lt;- 5
+input$discountRate                                   &lt;- 0.015
+input$averageFamilyReferred                          &lt;- 2       
+input$familyReferredHCP                              &lt;- 1     
+input$adherenceIntensiveScreening                    &lt;- 0.9      
+input$crcmmrDefReferredHCPIntArm	                   &lt;- 0.3   
+input$crcmmrDefReferredHCPmmrbrafCompArmVCHA         &lt;-	0.3   
+input$crcmmrDefReferredHCPmmrCompArmVCHA	           &lt;- 0.08  
+input$crcmmrDefReferredHCPmmrbrafCompArmVIHA         &lt;- 0.08  
+input$crcmmrDefReferredHCPmmrCompArmOtherHA	         &lt;- 0.08  
+input$ecmmrDefReferredHCPIntArm	                     &lt;- 0.8   
+
+model_run(input)</code></pre>
+</div>
 <div id="covidseir" class="section level2">
-<h2><span class="header-section-number">13.10</span> COVIDSEIR</h2>
+<h2><span class="header-section-number">13.11</span> COVIDSEIR</h2>
 <p>We have recently deployed the Bayesian SEIR model to estimate physical-distancing effects <a href="https://doi.org/10.1101/2020.04.17.20070086">developed by Anderson et al</a> to our cloud infrastructure. The current version of the R package deployed to the PRISM server is <code>covidseir v0.0.0.9006</code>.</p>
 <p>The current implementation of the <code>covidseir</code> package is experimental and has some limitations, given the computational intensity of the model. Depending on the number of <code>chains</code> and <code>iterations</code>, the <code>html</code> connection might be dropped for calls that more than a dozen minutes.
 Currently, fitting the model with default parameters takes about 5 minutes. We are actively working to implement asynchronous support which would email the results back to the user when hours long model runs are requested.</p>
