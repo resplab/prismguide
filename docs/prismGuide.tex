@@ -73,7 +73,7 @@
 
 \title{Models on the Peer Models Network}
 \author{Amin Adibi, Stephanie Harvard, Mohsen Sadatsafavi}
-\date{2020-06-24}
+\date{2020-06-28}
 
 \begin{document}
 \maketitle
@@ -414,6 +414,46 @@ API User Guide & \href{https://resplab.github.io/prismguide/api-users-guide.html
 \bottomrule
 \end{longtable}
 
+\hypertarget{mmrcea}{%
+\chapter{MMRCEA}\label{mmrcea}}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{0.45\columnwidth}\raggedright
+Field\strut
+\end{minipage} & \begin{minipage}[b]{0.49\columnwidth}\raggedright
+Value\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.45\columnwidth}\raggedright
+Model Name\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
+Cost-effectiveness evaluation of province-wide universal mismatch repair (MMR) reflex testing for lynch syndrome (LS) in British Columbia\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.45\columnwidth}\raggedright
+Modelling Team\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
+Centre for Clinical Epidemiology \& Evaluation (C2E2)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.45\columnwidth}\raggedright
+Outcome\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
+Costs, QALYs and life-years for the prevention and management of colorectal and endometrial cancers patients and their families\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.45\columnwidth}\raggedright
+Excel Sheet\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
+Pending\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.45\columnwidth}\raggedright
+API User Guide\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
+\href{https://resplab.github.io/prismguide/api-users-guide.html\#mmrcea-1}{Link}\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
 \hypertarget{qrisk3}{%
 \chapter{QRISK3}\label{qrisk3}}
 
@@ -434,8 +474,8 @@ API User Guide & \href{https://resplab.github.io/prismguide/api-users-guide.html
 \hypertarget{api-users-guide}{%
 \chapter{API Users' Guide}\label{api-users-guide}}
 
-\hypertarget{accept-1}{%
-\section{ACCEPT}\label{accept-1}}
+\hypertarget{accept}{%
+\section{ACCEPT}\label{accept}}
 
 \textbf{Cloud Access through R}
 
@@ -476,8 +516,8 @@ curl \
 https://prism.peermodelsnetwork.com/route/accept/run
 \end{verbatim}
 
-\hypertarget{bode-1}{%
-\section{BODE}\label{bode-1}}
+\hypertarget{bode}{%
+\section{BODE}\label{bode}}
 
 \textbf{Cloud Access through R}
 
@@ -504,8 +544,8 @@ curl \
 https://prism.peermodelsnetwork.com/route/bode/run
 \end{verbatim}
 
-\hypertarget{epic-1}{%
-\section{EPIC}\label{epic-1}}
+\hypertarget{epic}{%
+\section{EPIC}\label{epic}}
 
 \textbf{Cloud Access through R}
 
@@ -519,8 +559,8 @@ input <- get_default_input()
 results <- model_run(input)
 \end{verbatim}
 
-\hypertarget{fev1-1}{%
-\section{FEV1}\label{fev1-1}}
+\hypertarget{fev1}{%
+\section{FEV1}\label{fev1}}
 
 \textbf{Cloud Access through R}
 
@@ -547,8 +587,8 @@ curl \
 https://prism.peermodelsnetwork.com/route/fev1/run
 \end{verbatim}
 
-\hypertarget{cvdanderson-1}{%
-\section{CVDAnderson}\label{cvdanderson-1}}
+\hypertarget{cvdanderson}{%
+\section{CVDAnderson}\label{cvdanderson}}
 
 \textbf{Cloud Access through R}
 
@@ -575,8 +615,8 @@ curl \
 https://prism.peermodelsnetwork.com/route/cvdanderson/run
 \end{verbatim}
 
-\hypertarget{chdwilson-1}{%
-\section{CHDWilson}\label{chdwilson-1}}
+\hypertarget{chdwilson}{%
+\section{CHDWilson}\label{chdwilson}}
 
 \textbf{Cloud Access through R}
 
@@ -603,8 +643,8 @@ curl \
 https://prism.peermodelsnetwork.com/route/chdwilson/run
 \end{verbatim}
 
-\hypertarget{cfmortality-1}{%
-\section{CFMortality}\label{cfmortality-1}}
+\hypertarget{cfmortality}{%
+\section{CFMortality}\label{cfmortality}}
 
 \textbf{Cloud Access through R}
 
@@ -631,8 +671,8 @@ curl \
 https://prism.peermodelsnetwork.com/route/cfmortality/run
 \end{verbatim}
 
-\hypertarget{qrisk3-1}{%
-\section{QRISK3}\label{qrisk3-1}}
+\hypertarget{qrisk3}{%
+\section{QRISK3}\label{qrisk3}}
 
 \textbf{Cloud Access through R}
 
@@ -646,8 +686,8 @@ input <- get_default_input()
 results <- model_run(input)
 \end{verbatim}
 
-\hypertarget{codexcopd-1}{%
-\section{CODEXCOPD}\label{codexcopd-1}}
+\hypertarget{codexcopd}{%
+\section{CODEXCOPD}\label{codexcopd}}
 
 \textbf{Cloud Access through R}
 
@@ -674,8 +714,8 @@ curl \
 https://prism.peermodelsnetwork.com/route/codexcopd/run
 \end{verbatim}
 
-\hypertarget{covidseir-1}{%
-\section{COVIDSEIR}\label{covidseir-1}}
+\hypertarget{covidseir}{%
+\section{COVIDSEIR}\label{covidseir}}
 
 We have recently deployed the Bayesian SEIR model to estimate physical-distancing effects \href{https://doi.org/10.1101/2020.04.17.20070086}{developed by Anderson et al} to our cloud infrastructure. The current version of the R package deployed to the PRISM server is \texttt{covidseir\ v0.0.0.9006}.
 
