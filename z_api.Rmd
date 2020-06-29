@@ -1,6 +1,6 @@
 # API Users' Guide
 
-## ACCEPT
+## ACCEPT API
 
 __Cloud Access through R__
 
@@ -40,7 +40,7 @@ curl \
 https://prism.peermodelsnetwork.com/route/accept/run
 ```
 
-## BODE
+## BODE API
 
 __Cloud Access through R__
 
@@ -67,7 +67,7 @@ curl \
 https://prism.peermodelsnetwork.com/route/bode/run
 ```
 
-## EPIC
+## EPIC API
 
 __Cloud Access through R__
 
@@ -81,7 +81,7 @@ input <- get_default_input()
 results <- model_run(input)
 ```
 
-## FEV1
+## FEV1 API
 
 __Cloud Access through R__
 
@@ -109,7 +109,7 @@ https://prism.peermodelsnetwork.com/route/fev1/run
 
 ```
 
-## CVDAnderson
+## CVDAnderson API
 
 __Cloud Access through R__
 
@@ -136,7 +136,7 @@ curl \
 https://prism.peermodelsnetwork.com/route/cvdanderson/run
 ```
 
-## CHDWilson
+## CHDWilson API
 
 __Cloud Access through R__
 
@@ -162,7 +162,7 @@ curl \
 https://prism.peermodelsnetwork.com/route/chdwilson/run
 ```
 
-## CFMortality
+## CFMortality API
 
 __Cloud Access through R__
 
@@ -188,7 +188,7 @@ curl \
 https://prism.peermodelsnetwork.com/route/cfmortality/run
 ```
 
-## QRISK3
+## QRISK3 API
 
 __Cloud Access through R__
 
@@ -202,7 +202,7 @@ input <- get_default_input()
 results <- model_run(input)
 ```
 
-## CODEXCOPD
+## CODEXCOPD API
 
 __Cloud Access through R__
 
@@ -228,7 +228,7 @@ curl \
 https://prism.peermodelsnetwork.com/route/codexcopd/run
 ```
 
-## MMRCEA
+## MMRCEA API
 
 __Cloud Access through R__
 
@@ -256,7 +256,7 @@ model_run(input)
 ```
 
 
-## COVIDSEIR
+## COVIDSEIR API (experimental)
 
 We have recently deployed the Bayesian SEIR model to estimate physical-distancing effects [developed by Anderson et al](https://doi.org/10.1101/2020.04.17.20070086) to our cloud infrastructure. The current version of the R package deployed to the PRISM server is `covidseir v0.0.0.9006`. 
 

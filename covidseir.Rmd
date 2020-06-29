@@ -7,4 +7,4 @@
 | Publication   | [10.1101/2020.04.17.20070086](https://doi.org/10.1101/2020.04.17.20070086)|
 | Outcome       | COVID-19 Cases |
 | R Package     | [covidseir](https://github.com/seananderson/covidseir)|
-| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#covidseir-1)          |
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#covidseir)          |

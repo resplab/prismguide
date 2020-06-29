@@ -7,4 +7,4 @@
 | Publication   | [10.1378/chest.13-1328](https://doi.org/10.1378/chest.13-1328)|
 | Outcome       | Survival and readmission at both 3 months and 1 year after hospital discharge for a COPD exacerbation |
 | R Package     | [codexcopd](https://github.com/resplab/codexcopd)|
-| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#codexcopd-1)         |
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#codexcopd)         |

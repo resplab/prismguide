@@ -7,4 +7,4 @@
 | Publication   | [10.1056/NEJMoa021322](https://doi.org/10.1056/NEJMoa021322)|
 | Outcome       | Mortality Risk |
 | R Package     | [bode](https://github.com/resplab/bode)|
-| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#bode-1)          |
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#bode)          |

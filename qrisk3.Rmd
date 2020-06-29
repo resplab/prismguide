@@ -7,4 +7,4 @@
 | Publication   | [10.1136/bmj.j2099](https://doi.org/10.1136/bmj.j2099)|
 | Outcome       | 10-yr risk of heart attack/stroke |
 | R Package     | [QRISK3](https://cran.r-project.org/package=QRISK3)|
-| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#qrisk3-1)          |
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#qrisk3)          |
