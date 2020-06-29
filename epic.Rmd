@@ -10,4 +10,4 @@
 | Interviews    | [Mohsen Sadatsafavi on the EPIC Model](https://www.peermodelsnetwork.com/post/interview-with-mohsen-sadatsafavi)|
 | R Package     | [epicR](https://github.com/resplab/epicR)|
 | Excel Sheet   | [PC Version](https://drive.google.com/uc?export=download&id=15yY_O7wVgoEbaHNLDBjfN2PqnenB6WWa) |
-| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#epic)          |
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#epic-api)          |

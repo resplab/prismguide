@@ -6,4 +6,4 @@
 | Modelling Team| Centre for Clinical Epidemiology & Evaluation (C2E2)|
 | Outcome       | Costs, QALYs and life-years for the prevention and management of colorectal and endometrial cancers patients and their families |
 | Excel Sheet   | Pending |
-| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#mmrcea)          |
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#mmrcea-api)          |
