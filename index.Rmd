@@ -1,5 +1,5 @@
 --- 
-title: "Models on the Peer Models Network"
+title: "Peer Models Network API Guide"
 author: "Amin Adibi, Stephanie Harvard, Mohsen Sadatsafavi"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
