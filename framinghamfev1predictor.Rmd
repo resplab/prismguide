@@ -1,0 +1,10 @@
+# Framingham FEV1 Predictor
+
+| Field         | Value         |
+| ------------- |-------------- |
+| Model Name    | An Individualized Prediction Model for Long-term Lung Function Trajectory and Risk of COPD in the General Population |
+| Modelling Team| [RESP](http://resp.core.ubc.ca)|
+| Publication   | [doi:10.1016/j.chest.2019.09.003](http://resp.core.ubc.ca/ipress/FraminghamFEV1)|
+| Outcome       | Lung function over next 20 years|
+| Web App       | [Lung Function Predictor for the General Population](http://resp.core.ubc.ca/ipress/FEV1Pred)|
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#framinghamfev1predictor-api)          |
