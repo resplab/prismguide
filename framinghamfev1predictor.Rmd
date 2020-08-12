@@ -1,4 +1,4 @@
-# Framingham FEV1 Predictor
+# FraminghamFEV1Predictor
 
 | Field         | Value         |
 | ------------- |-------------- |
