@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>14 API Users’ Guide | Peer Models Network API Guide</title>
+  <title>15 API Users’ Guide | Peer Models Network API Guide</title>
   <meta name="description" content="User guide for accessing models hosted on the Peer Models Network cloud." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="14 API Users’ Guide | Peer Models Network API Guide" />
+  <meta property="og:title" content="15 API Users’ Guide | Peer Models Network API Guide" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="14 API Users’ Guide | Peer Models Network API Guide" />
+  <meta name="twitter:title" content="15 API Users’ Guide | Peer Models Network API Guide" />
   
   <meta name="twitter:description" content="User guide for accessing models hosted on the Peer Models Network cloud." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Amin Adibi, Stephanie Harvard, Mohsen Sadatsafavi" />
 
 
-<meta name="date" content="2020-08-12" />
+<meta name="date" content="2021-09-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,9 @@
   
 <link rel="prev" href="qrisk3.html"/>
 
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,8 +51,9 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 
@@ -82,19 +85,21 @@
 <li class="chapter" data-level="10" data-path="fev1.html"><a href="fev1.html"><i class="fa fa-check"></i><b>10</b> FEV1</a></li>
 <li class="chapter" data-level="11" data-path="framinghamfev1predictor.html"><a href="framinghamfev1predictor.html"><i class="fa fa-check"></i><b>11</b> FraminghamFEV1Predictor</a></li>
 <li class="chapter" data-level="12" data-path="mmrcea.html"><a href="mmrcea.html"><i class="fa fa-check"></i><b>12</b> MMRCEA</a></li>
-<li class="chapter" data-level="13" data-path="qrisk3.html"><a href="qrisk3.html"><i class="fa fa-check"></i><b>13</b> QRISK3</a></li>
-<li class="chapter" data-level="14" data-path="api-users-guide.html"><a href="api-users-guide.html"><i class="fa fa-check"></i><b>14</b> API Users’ Guide</a><ul>
-<li class="chapter" data-level="14.1" data-path="api-users-guide.html"><a href="api-users-guide.html#accept-api"><i class="fa fa-check"></i><b>14.1</b> ACCEPT API</a></li>
-<li class="chapter" data-level="14.2" data-path="api-users-guide.html"><a href="api-users-guide.html#bode-api"><i class="fa fa-check"></i><b>14.2</b> BODE API</a></li>
-<li class="chapter" data-level="14.3" data-path="api-users-guide.html"><a href="api-users-guide.html#epic-api"><i class="fa fa-check"></i><b>14.3</b> EPIC API</a></li>
-<li class="chapter" data-level="14.4" data-path="api-users-guide.html"><a href="api-users-guide.html#fev1-api"><i class="fa fa-check"></i><b>14.4</b> FEV1 API</a></li>
-<li class="chapter" data-level="14.5" data-path="api-users-guide.html"><a href="api-users-guide.html#cvdanderson-api"><i class="fa fa-check"></i><b>14.5</b> CVDAnderson API</a></li>
-<li class="chapter" data-level="14.6" data-path="api-users-guide.html"><a href="api-users-guide.html#chdwilson-api"><i class="fa fa-check"></i><b>14.6</b> CHDWilson API</a></li>
-<li class="chapter" data-level="14.7" data-path="api-users-guide.html"><a href="api-users-guide.html#cfmortality-api"><i class="fa fa-check"></i><b>14.7</b> CFMortality API</a></li>
-<li class="chapter" data-level="14.8" data-path="api-users-guide.html"><a href="api-users-guide.html#qrisk3-api"><i class="fa fa-check"></i><b>14.8</b> QRISK3 API</a></li>
-<li class="chapter" data-level="14.9" data-path="api-users-guide.html"><a href="api-users-guide.html#codexcopd-api"><i class="fa fa-check"></i><b>14.9</b> CODEXCOPD API</a></li>
-<li class="chapter" data-level="14.10" data-path="api-users-guide.html"><a href="api-users-guide.html#mmrcea-api"><i class="fa fa-check"></i><b>14.10</b> MMRCEA API</a></li>
-<li class="chapter" data-level="14.11" data-path="api-users-guide.html"><a href="api-users-guide.html#covidseir-api-experimental"><i class="fa fa-check"></i><b>14.11</b> COVIDSEIR API (experimental)</a></li>
+<li class="chapter" data-level="13" data-path="plcom2012.html"><a href="plcom2012.html"><i class="fa fa-check"></i><b>13</b> PLCOM2012</a></li>
+<li class="chapter" data-level="14" data-path="qrisk3.html"><a href="qrisk3.html"><i class="fa fa-check"></i><b>14</b> QRISK3</a></li>
+<li class="chapter" data-level="15" data-path="api-users-guide.html"><a href="api-users-guide.html"><i class="fa fa-check"></i><b>15</b> API Users’ Guide</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="api-users-guide.html"><a href="api-users-guide.html#accept-api"><i class="fa fa-check"></i><b>15.1</b> ACCEPT API</a></li>
+<li class="chapter" data-level="15.2" data-path="api-users-guide.html"><a href="api-users-guide.html#bode-api"><i class="fa fa-check"></i><b>15.2</b> BODE API</a></li>
+<li class="chapter" data-level="15.3" data-path="api-users-guide.html"><a href="api-users-guide.html#epic-api"><i class="fa fa-check"></i><b>15.3</b> EPIC API</a></li>
+<li class="chapter" data-level="15.4" data-path="api-users-guide.html"><a href="api-users-guide.html#fev1-api"><i class="fa fa-check"></i><b>15.4</b> FEV1 API</a></li>
+<li class="chapter" data-level="15.5" data-path="api-users-guide.html"><a href="api-users-guide.html#cvdanderson-api"><i class="fa fa-check"></i><b>15.5</b> CVDAnderson API</a></li>
+<li class="chapter" data-level="15.6" data-path="api-users-guide.html"><a href="api-users-guide.html#chdwilson-api"><i class="fa fa-check"></i><b>15.6</b> CHDWilson API</a></li>
+<li class="chapter" data-level="15.7" data-path="api-users-guide.html"><a href="api-users-guide.html#cfmortality-api"><i class="fa fa-check"></i><b>15.7</b> CFMortality API</a></li>
+<li class="chapter" data-level="15.8" data-path="api-users-guide.html"><a href="api-users-guide.html#qrisk3-api"><i class="fa fa-check"></i><b>15.8</b> QRISK3 API</a></li>
+<li class="chapter" data-level="15.9" data-path="api-users-guide.html"><a href="api-users-guide.html#codexcopd-api"><i class="fa fa-check"></i><b>15.9</b> CODEXCOPD API</a></li>
+<li class="chapter" data-level="15.10" data-path="api-users-guide.html"><a href="api-users-guide.html#mmrcea-api"><i class="fa fa-check"></i><b>15.10</b> MMRCEA API</a></li>
+<li class="chapter" data-level="15.11" data-path="api-users-guide.html"><a href="api-users-guide.html#covidseir-api-experimental"><i class="fa fa-check"></i><b>15.11</b> COVIDSEIR API (experimental)</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://www.peermodelsnetwork.com" target="blank">Peer Models Network</a></li>
@@ -116,10 +121,10 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="api-users-guide" class="section level1">
-<h1><span class="header-section-number">14</span> API Users’ Guide</h1>
-<div id="accept-api" class="section level2">
-<h2><span class="header-section-number">14.1</span> ACCEPT API</h2>
+<div id="api-users-guide" class="section level1" number="15">
+<h1><span class="header-section-number">15</span> API Users’ Guide</h1>
+<div id="accept-api" class="section level2" number="15.1">
+<h2><span class="header-section-number">15.1</span> ACCEPT API</h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patients provided in the <code>accept</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -146,8 +151,8 @@ print(results)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;ID&quot;: &quot;10001&quot;,&quot;male&quot;: 1,&quot;age&quot;: 57,&quot;smoker&quot;: 0,&quot;oxygen&quot;: 0,&quot;statin&quot;: 0,&quot;LAMA&quot;: 1,&quot;LABA&quot;: 1,&quot;ICS&quot;: 1,&quot;FEV1&quot;: 51,&quot;BMI&quot;: 18,&quot;SGRQ&quot;: 63,&quot;LastYrExacCount&quot;: 2,&quot;LastYrSevExacCount&quot;: 1,&quot;randomized_azithromycin&quot;: 0,&quot;randomized_statin&quot;: 0,&quot;randomized_LAMA&quot;: 0,&quot;randomized_LABA&quot;: 0,&quot;randomized_ICS&quot;: 0, &quot;random_sampling_N&quot; : 1000, &quot;random_distribution_iteration&quot; : 20000, &quot;calculate_CIs&quot; : &quot;TRUE&quot;}]}&#39; \
 https://prism.peermodelsnetwork.com/route/accept/run</code></pre>
 </div>
-<div id="bode-api" class="section level2">
-<h2><span class="header-section-number">14.2</span> BODE API</h2>
+<div id="bode-api" class="section level2" number="15.2">
+<h2><span class="header-section-number">15.2</span> BODE API</h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>bode</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -164,8 +169,8 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;FEV1&quot;: 40,&quot;mMRC&quot;: 3,&quot;BMI&quot;: 22,&quot;walk&quot;: 100}]}&#39; \
 https://prism.peermodelsnetwork.com/route/bode/run</code></pre>
 </div>
-<div id="epic-api" class="section level2">
-<h2><span class="header-section-number">14.3</span> EPIC API</h2>
+<div id="epic-api" class="section level2" number="15.3">
+<h2><span class="header-section-number">15.3</span> EPIC API</h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>epicR</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -174,8 +179,8 @@ connect_to_model(&quot;epic&quot;, api_key = YOUR_API_KEY)
 input &lt;- get_default_input()
 results &lt;- model_run(input)</code></pre>
 </div>
-<div id="fev1-api" class="section level2">
-<h2><span class="header-section-number">14.4</span> FEV1 API</h2>
+<div id="fev1-api" class="section level2" number="15.4">
+<h2><span class="header-section-number">15.4</span> FEV1 API</h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>fev1</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -193,8 +198,8 @@ results &lt;- model_run(input)</code></pre>
 https://prism.peermodelsnetwork.com/route/fev1/run
 </code></pre>
 </div>
-<div id="cvdanderson-api" class="section level2">
-<h2><span class="header-section-number">14.5</span> CVDAnderson API</h2>
+<div id="cvdanderson-api" class="section level2" number="15.5">
+<h2><span class="header-section-number">15.5</span> CVDAnderson API</h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>cvdanderson</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -211,8 +216,8 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;age&quot;: 33,&quot;gender&quot;: 1,&quot;Tchol&quot;: 230,&quot;ECG_LVH&quot;: 0,&quot;HDLchol&quot;: 48, &quot;SBP&quot;: 135, &quot;DBP&quot;: 88, &quot;diabetes&quot;: 1, &quot;smoker&quot;: 1, &quot;t&quot;: 10}]}&#39; \
 https://prism.peermodelsnetwork.com/route/cvdanderson/run</code></pre>
 </div>
-<div id="chdwilson-api" class="section level2">
-<h2><span class="header-section-number">14.6</span> CHDWilson API</h2>
+<div id="chdwilson-api" class="section level2" number="15.6">
+<h2><span class="header-section-number">15.6</span> CHDWilson API</h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>chdwilson</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -229,8 +234,8 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;age&quot;: 55,&quot;gender&quot;: 1,&quot;TChol&quot;: 250,&quot;LDL&quot;: 120,&quot;HDL&quot;: 39, &quot;SBP&quot;: 146, &quot;DBP&quot;: 88, &quot;diabetes&quot;: 0, &quot;smoker&quot;: 1}]}&#39; \
 https://prism.peermodelsnetwork.com/route/chdwilson/run</code></pre>
 </div>
-<div id="cfmortality-api" class="section level2">
-<h2><span class="header-section-number">14.7</span> CFMortality API</h2>
+<div id="cfmortality-api" class="section level2" number="15.7">
+<h2><span class="header-section-number">15.7</span> CFMortality API</h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>chdwilson</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -247,8 +252,8 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;male&quot;: 0,&quot;age&quot;: 57,&quot;fvc&quot;: 66.7,&quot;fev1&quot;: 47.4,&quot;fev1LastYear&quot;: 80.5,&quot;bcepacia&quot;: 0,&quot;underweight&quot;: 0,&quot;nHosp&quot;: 0,&quot;pancreaticInsufficient&quot;: 1,&quot;CFRelatedDiabetes&quot;: 0,&quot;ageAtDiagnosis&quot;: 0.9}]}&#39; \
 https://prism.peermodelsnetwork.com/route/cfmortality/run</code></pre>
 </div>
-<div id="qrisk3-api" class="section level2">
-<h2><span class="header-section-number">14.8</span> QRISK3 API</h2>
+<div id="qrisk3-api" class="section level2" number="15.8">
+<h2><span class="header-section-number">15.8</span> QRISK3 API</h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>QRISK3</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -257,8 +262,8 @@ connect_to_model(&quot;qrisk3&quot;, api_key = YOUR_API_KEY)
 input &lt;- get_default_input()
 results &lt;- model_run(input)</code></pre>
 </div>
-<div id="codexcopd-api" class="section level2">
-<h2><span class="header-section-number">14.9</span> CODEXCOPD API</h2>
+<div id="codexcopd-api" class="section level2" number="15.9">
+<h2><span class="header-section-number">15.9</span> CODEXCOPD API</h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>codexcopd</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -275,8 +280,8 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;age&quot;:40,&quot;charlson&quot;:8,&quot;FEV1&quot;:40,&quot;mMRC&quot;:3,&quot;exacerbation&quot;:2}]}&#39; \
 https://prism.peermodelsnetwork.com/route/codexcopd/run</code></pre>
 </div>
-<div id="mmrcea-api" class="section level2">
-<h2><span class="header-section-number">14.10</span> MMRCEA API</h2>
+<div id="mmrcea-api" class="section level2" number="15.10">
+<h2><span class="header-section-number">15.10</span> MMRCEA API</h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example inputs provided by the modelling team:</p>
 <pre><code>library(peermodels)
@@ -290,17 +295,17 @@ input$discountRate                                   &lt;- 0.015
 input$averageFamilyReferred                          &lt;- 2       
 input$familyReferredHCP                              &lt;- 1     
 input$adherenceIntensiveScreening                    &lt;- 0.9      
-input$crcmmrDefReferredHCPIntArm	                   &lt;- 0.3   
-input$crcmmrDefReferredHCPmmrbrafCompArmVCHA         &lt;-	0.3   
-input$crcmmrDefReferredHCPmmrCompArmVCHA	           &lt;- 0.08  
+input$crcmmrDefReferredHCPIntArm                       &lt;- 0.3   
+input$crcmmrDefReferredHCPmmrbrafCompArmVCHA         &lt;- 0.3   
+input$crcmmrDefReferredHCPmmrCompArmVCHA               &lt;- 0.08  
 input$crcmmrDefReferredHCPmmrbrafCompArmVIHA         &lt;- 0.08  
-input$crcmmrDefReferredHCPmmrCompArmOtherHA	         &lt;- 0.08  
-input$ecmmrDefReferredHCPIntArm	                     &lt;- 0.8   
+input$crcmmrDefReferredHCPmmrCompArmOtherHA          &lt;- 0.08  
+input$ecmmrDefReferredHCPIntArm                      &lt;- 0.8   
 
 model_run(input)</code></pre>
 </div>
-<div id="covidseir-api-experimental" class="section level2">
-<h2><span class="header-section-number">14.11</span> COVIDSEIR API (experimental)</h2>
+<div id="covidseir-api-experimental" class="section level2" number="15.11">
+<h2><span class="header-section-number">15.11</span> COVIDSEIR API (experimental)</h2>
 <p>We have recently deployed the Bayesian SEIR model to estimate physical-distancing effects <a href="https://doi.org/10.1101/2020.04.17.20070086">developed by Anderson et al</a> to our cloud infrastructure. The current version of the R package deployed to the PRISM server is <code>covidseir v0.0.0.9006</code>.</p>
 <p>The current implementation of the <code>covidseir</code> package is experimental and has some limitations, given the computational intensity of the model. Depending on the number of <code>chains</code> and <code>iterations</code>, the <code>html</code> connection might be dropped for calls that more than a dozen minutes.
 Currently, fitting the model with default parameters takes about 5 minutes. We are actively working to implement asynchronous support which would email the results back to the user when hours long model runs are requested.</p>
@@ -386,7 +391,6 @@ http://model-covidseir.cp.prism-ubc.linaralabs.com/ocpu/library/covidseirPrism/R
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -405,6 +409,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -425,6 +430,10 @@ gitbook.start({
 "text": null
 },
 "download": ["prismGuide.pdf", "prismGuide.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

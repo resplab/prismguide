@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6 CODEXCOPD | Peer Models Network API Guide</title>
   <meta name="description" content="User guide for accessing models hosted on the Peer Models Network cloud." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 CODEXCOPD | Peer Models Network API Guide" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Amin Adibi, Stephanie Harvard, Mohsen Sadatsafavi" />
 
 
-<meta name="date" content="2020-08-12" />
+<meta name="date" content="2021-09-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,9 @@
   
 <link rel="prev" href="chdwilson.html"/>
 <link rel="next" href="covidseir.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,8 +51,9 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 
@@ -82,19 +85,21 @@
 <li class="chapter" data-level="10" data-path="fev1.html"><a href="fev1.html"><i class="fa fa-check"></i><b>10</b> FEV1</a></li>
 <li class="chapter" data-level="11" data-path="framinghamfev1predictor.html"><a href="framinghamfev1predictor.html"><i class="fa fa-check"></i><b>11</b> FraminghamFEV1Predictor</a></li>
 <li class="chapter" data-level="12" data-path="mmrcea.html"><a href="mmrcea.html"><i class="fa fa-check"></i><b>12</b> MMRCEA</a></li>
-<li class="chapter" data-level="13" data-path="qrisk3.html"><a href="qrisk3.html"><i class="fa fa-check"></i><b>13</b> QRISK3</a></li>
-<li class="chapter" data-level="14" data-path="api-users-guide.html"><a href="api-users-guide.html"><i class="fa fa-check"></i><b>14</b> API Users’ Guide</a><ul>
-<li class="chapter" data-level="14.1" data-path="api-users-guide.html"><a href="api-users-guide.html#accept-api"><i class="fa fa-check"></i><b>14.1</b> ACCEPT API</a></li>
-<li class="chapter" data-level="14.2" data-path="api-users-guide.html"><a href="api-users-guide.html#bode-api"><i class="fa fa-check"></i><b>14.2</b> BODE API</a></li>
-<li class="chapter" data-level="14.3" data-path="api-users-guide.html"><a href="api-users-guide.html#epic-api"><i class="fa fa-check"></i><b>14.3</b> EPIC API</a></li>
-<li class="chapter" data-level="14.4" data-path="api-users-guide.html"><a href="api-users-guide.html#fev1-api"><i class="fa fa-check"></i><b>14.4</b> FEV1 API</a></li>
-<li class="chapter" data-level="14.5" data-path="api-users-guide.html"><a href="api-users-guide.html#cvdanderson-api"><i class="fa fa-check"></i><b>14.5</b> CVDAnderson API</a></li>
-<li class="chapter" data-level="14.6" data-path="api-users-guide.html"><a href="api-users-guide.html#chdwilson-api"><i class="fa fa-check"></i><b>14.6</b> CHDWilson API</a></li>
-<li class="chapter" data-level="14.7" data-path="api-users-guide.html"><a href="api-users-guide.html#cfmortality-api"><i class="fa fa-check"></i><b>14.7</b> CFMortality API</a></li>
-<li class="chapter" data-level="14.8" data-path="api-users-guide.html"><a href="api-users-guide.html#qrisk3-api"><i class="fa fa-check"></i><b>14.8</b> QRISK3 API</a></li>
-<li class="chapter" data-level="14.9" data-path="api-users-guide.html"><a href="api-users-guide.html#codexcopd-api"><i class="fa fa-check"></i><b>14.9</b> CODEXCOPD API</a></li>
-<li class="chapter" data-level="14.10" data-path="api-users-guide.html"><a href="api-users-guide.html#mmrcea-api"><i class="fa fa-check"></i><b>14.10</b> MMRCEA API</a></li>
-<li class="chapter" data-level="14.11" data-path="api-users-guide.html"><a href="api-users-guide.html#covidseir-api-experimental"><i class="fa fa-check"></i><b>14.11</b> COVIDSEIR API (experimental)</a></li>
+<li class="chapter" data-level="13" data-path="plcom2012.html"><a href="plcom2012.html"><i class="fa fa-check"></i><b>13</b> PLCOM2012</a></li>
+<li class="chapter" data-level="14" data-path="qrisk3.html"><a href="qrisk3.html"><i class="fa fa-check"></i><b>14</b> QRISK3</a></li>
+<li class="chapter" data-level="15" data-path="api-users-guide.html"><a href="api-users-guide.html"><i class="fa fa-check"></i><b>15</b> API Users’ Guide</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="api-users-guide.html"><a href="api-users-guide.html#accept-api"><i class="fa fa-check"></i><b>15.1</b> ACCEPT API</a></li>
+<li class="chapter" data-level="15.2" data-path="api-users-guide.html"><a href="api-users-guide.html#bode-api"><i class="fa fa-check"></i><b>15.2</b> BODE API</a></li>
+<li class="chapter" data-level="15.3" data-path="api-users-guide.html"><a href="api-users-guide.html#epic-api"><i class="fa fa-check"></i><b>15.3</b> EPIC API</a></li>
+<li class="chapter" data-level="15.4" data-path="api-users-guide.html"><a href="api-users-guide.html#fev1-api"><i class="fa fa-check"></i><b>15.4</b> FEV1 API</a></li>
+<li class="chapter" data-level="15.5" data-path="api-users-guide.html"><a href="api-users-guide.html#cvdanderson-api"><i class="fa fa-check"></i><b>15.5</b> CVDAnderson API</a></li>
+<li class="chapter" data-level="15.6" data-path="api-users-guide.html"><a href="api-users-guide.html#chdwilson-api"><i class="fa fa-check"></i><b>15.6</b> CHDWilson API</a></li>
+<li class="chapter" data-level="15.7" data-path="api-users-guide.html"><a href="api-users-guide.html#cfmortality-api"><i class="fa fa-check"></i><b>15.7</b> CFMortality API</a></li>
+<li class="chapter" data-level="15.8" data-path="api-users-guide.html"><a href="api-users-guide.html#qrisk3-api"><i class="fa fa-check"></i><b>15.8</b> QRISK3 API</a></li>
+<li class="chapter" data-level="15.9" data-path="api-users-guide.html"><a href="api-users-guide.html#codexcopd-api"><i class="fa fa-check"></i><b>15.9</b> CODEXCOPD API</a></li>
+<li class="chapter" data-level="15.10" data-path="api-users-guide.html"><a href="api-users-guide.html#mmrcea-api"><i class="fa fa-check"></i><b>15.10</b> MMRCEA API</a></li>
+<li class="chapter" data-level="15.11" data-path="api-users-guide.html"><a href="api-users-guide.html#covidseir-api-experimental"><i class="fa fa-check"></i><b>15.11</b> COVIDSEIR API (experimental)</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://www.peermodelsnetwork.com" target="blank">Peer Models Network</a></li>
@@ -116,7 +121,7 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="codexcopd" class="section level1">
+<div id="codexcopd" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> CODEXCOPD</h1>
 <table>
 <colgroup>
@@ -168,7 +173,6 @@
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -187,6 +191,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -207,6 +212,10 @@ gitbook.start({
 "text": null
 },
 "download": ["prismGuide.pdf", "prismGuide.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

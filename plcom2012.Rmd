@@ -1,0 +1,11 @@
+# PLCOM2012
+
+| Field         | Value         |
+| ------------- |-------------- |
+| Model Name    | Prediction of 6-year probability of lung cancer in an individual person |
+| Modelling Team| Tammemag et al.|
+| Publication   | [10.1056/NEJMoa1211776](http://doi.org/10.1056/NEJMoa1211776)|
+| Outcome       | Lung cancer risk score |
+| Excel Sheet   | [PC Version](https://drive.google.com/uc?export=download&id=14H_4NQzY4xqsRDu3ZnVzcJa8ym66aFyb) |
+| R Package     | [plcom2012](https://github.com/resplab/PLCOm2012)|
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#plcom2012-api)          |
