@@ -350,3 +350,30 @@ curl \
 } ' \
 http://model-covidseir.cp.prism-ubc.linaralabs.com/ocpu/library/covidseirPrism/R/gateway/json
 ```
+
+## PLCOM2012 API
+
+__Cloud Access through R__
+
+Users can access models on the Peer Models Network using the `peermodels` R package, available on [GitHub](https://github.com/resplab/peermodels). The following code snippet illustrates how you can run the model for example patient provided in the `PLCOM2012` package:
+
+```
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("PLCOm2012", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
+```
+
+__Cloud Access through Linux Bash__
+
+In Ubuntu, you can call the API with `curl`:
+
+```
+curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"age"=62, "race"="White", "education"=4, "bmi"=27, "copd"=0, "cancer_hist"=0, "family_hist_lung_cancer"=0, "smoking_status"=0, "smoking_intensity"=80, "duration_smoking"=27, "smoking_quit_time"=10}]}' \
+https://prism.peermodelsnetwork.com/route/plcom2012/run
+```

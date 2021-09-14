@@ -24,3 +24,4 @@ qrisk3-api
 codexcopd-api
 mmrcea-api
 covidseir-api-experimental
+plcom2012-api

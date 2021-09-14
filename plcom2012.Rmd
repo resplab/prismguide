@@ -6,6 +6,6 @@
 | Modelling Team| Tammemag et al.|
 | Publication   | [10.1056/NEJMoa1211776](http://doi.org/10.1056/NEJMoa1211776)|
 | Outcome       | Lung cancer risk score |
-| Excel Sheet   | [PC Version](https://drive.google.com/uc?export=download&id=14H_4NQzY4xqsRDu3ZnVzcJa8ym66aFyb) |
+| Excel Sheet   | [PC Version](https://drive.google.com/file/d/1_AWrVTXuS98mjWTq2jV_lbLLZyRw_vr8/view?usp=sharing) |
 | R Package     | [plcom2012](https://github.com/resplab/PLCOm2012)|
 | API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#plcom2012-api)          |
