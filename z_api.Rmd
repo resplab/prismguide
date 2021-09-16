@@ -388,7 +388,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("ADO", api_key = YOUR_API_KEY)
+connect_to_model("ado", api_key = YOUR_API_KEY)
 input <- get_default_input()
 results <- model_run(input)
 ```
@@ -404,4 +404,31 @@ curl \
 -H "Content-Type: application/json" \
 -d '{"func":["prism_model_run"],"model_input":[{"fev":65,  "mmrc":1, "age":41 }]}' \
 http://model-ado.cp.prism-ubc.linaralabs.com/ocpu/library/adoPrism/R/gateway/json
+```
+
+## DOSE API
+
+__Cloud Access through R__
+
+Users can access models on the Peer Models Network using the `peermodels` R package, available on [GitHub](https://github.com/resplab/peermodels). The following code snippet illustrates how you can run the model for example patient provided in the `DOSE` package:
+
+```
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("dose", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
+```
+
+__Cloud Access through Linux Bash__
+
+In Ubuntu, you can call the API with `curl`:
+
+```
+curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"mmrc":1, "fev":55, "smoking_status":1, "exacerbation":2}]}' \
+http://model-dose.cp.prism-ubc.linaralabs.com/ocpu/library/dosePrism/R/gateway/json
 ```

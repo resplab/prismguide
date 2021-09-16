@@ -1,0 +1,11 @@
+# DOSE
+
+| Field         | Value         |
+| ------------- |-------------- |
+| Model Name    | The DOSE (dyspnoea, obstruction, smoking, exacerbation ) Index |
+| Modelling Team| Jones et al.|
+| Publication   | [10.1164/rccm.200902-0271OC](http://doi.org/10.1164/rccm.200902-0271OC)|
+| Outcome       | Mortality |
+| Excel Sheet   | [PC Version](https://drive.google.com/file/d/1RHxWddM496ezmeimpTS7X3NxMSZpUPR5/view?usp=sharing) |
+| R Package     | [dose](https://github.com/resplab/dose)|
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#dose-api)          |

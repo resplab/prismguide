@@ -7,6 +7,7 @@ chdwilson
 codexcopd
 covidseir
 cvdanderson
+dose
 epic
 fev1
 framinghamfev1predictor
@@ -27,3 +28,4 @@ mmrcea-api
 covidseir-api-experimental
 plcom2012-api
 ado-api
+dose-api
