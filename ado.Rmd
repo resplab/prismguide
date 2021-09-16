@@ -1,0 +1,11 @@
+# ADO
+
+| Field         | Value         |
+| ------------- |-------------- |
+| Model Name    | The ADO (age, dyspnoea, airflow obstruction ) Index |
+| Modelling Team| Puhan et al.|
+| Publication   | [10.1016/S0140-6736(09)61301-5](http://doi.org/10.1016/S0140-6736(09)61301-5)|
+| Outcome       | Mortality |
+| Excel Sheet   | [PC Version](https://drive.google.com/file/d/1ZNh4QuUPcKqzxuQPYRnArqJVIgWj3iEV/view?usp=sharing) |
+| R Package     | [plcom2012](https://github.com/resplab/ado)|
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#ado-api)          |

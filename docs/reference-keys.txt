@@ -1,5 +1,6 @@
 introduction
 accept
+ado
 bode
 cfmortality
 chdwilson
@@ -25,3 +26,4 @@ codexcopd-api
 mmrcea-api
 covidseir-api-experimental
 plcom2012-api
+ado-api
