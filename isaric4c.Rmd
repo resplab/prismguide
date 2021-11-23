@@ -1,0 +1,11 @@
+# ISARIC4C
+
+| Field         | Value         |
+| ------------- |-------------- |
+| Model Name    | prediction of in-hospital mortality or in-hospital clinical deterioration probability (defined as any requirement of ventilatory support or critical care, or death) for hospitalised COVID-19 patients |
+| Modelling Team| ISARIC4C consortium |
+| Publication   | [10.1016/S2213-2600(20)30559-2](http://doi.org/10.1016/S2213-2600(20)30559-2)|
+| Outcome       | In-hospital mortality or in-hospital clinical deterioration probability |
+| Excel Sheet   | [PC Version](https://drive.google.com/file/d/1aU7J365zvBdvxqpVg3a-fYwlKsAlezlI/view?usp=sharing) |
+| R Package     | [isaric4c](https://github.com/resplab/isaric4c)|
+| API User Guide| [Link](https://resplab.github.io/prismguide/api-users-guide.html#isaric4c-api)          |

@@ -432,3 +432,30 @@ curl \
 -d '{"func":["prism_model_run"],"model_input":[{"mmrc":1, "fev":55, "smoking_status":1, "exacerbation":2}]}' \
 http://model-dose.cp.prism-ubc.linaralabs.com/ocpu/library/dosePrism/R/gateway/json
 ```
+
+## ISARIC4C API
+
+__Cloud Access through R__
+
+Users can access models on the Peer Models Network using the `peermodels` R package, available on [GitHub](https://github.com/resplab/peermodels). The following code snippet illustrates how you can run the model for example patient provided in the `ISARIC4C` package:
+
+```
+remotes::install_github (resplab/peermodels)
+library(peermodels)
+connect_to_model("isaric4c", api_key = YOUR_API_KEY)
+input <- get_default_input()
+results <- model_run(input)
+```
+
+__Cloud Access through Linux Bash__
+
+In Ubuntu, you can call the API with `curl`:
+
+```
+curl \
+-X POST \
+-H "x-prism-auth-user: REPLACE_WITH_API_KEY" \
+-H "Content-Type: application/json" \
+-d '{"func":["prism_model_run"],"model_input":[{"age":69, "sex":1, "num_comorbidities":1, "respiratory_rate":25, "admission_oxygen_saturation": 90, "glasgow_coma_scale": 10, "urea": 10, "crp": 70, "func": 0}]}' \
+http://model-dose.cp.prism-ubc.linaralabs.com/ocpu/library/isaric4cPrism/R/gateway/json
+```
