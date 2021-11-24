@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>18 API Users’ Guide | Peer Models Network API Guide</title>
   <meta name="description" content="User guide for accessing models hosted on the Peer Models Network cloud." />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="18 API Users’ Guide | Peer Models Network API Guide" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Amin Adibi, Stephanie Harvard, Mohsen Sadatsafavi" />
 
 
-<meta name="date" content="2021-11-23" />
+<meta name="date" content="2021-11-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="qrisk3.html"/>
 
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -139,8 +139,7 @@
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patients provided in the <code>accept</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model(&quot;accept&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;accept&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 <p><strong>Cloud Access through Python</strong></p>
 <pre><code>import json
@@ -167,8 +166,7 @@ https://prism.peermodelsnetwork.com/route/accept/run</code></pre>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>bode</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model(&quot;bode&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;bode&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 <p><strong>Cloud Access through Linux Bash</strong></p>
 <p>In Ubuntu, you can call the API with <code>curl</code>:</p>
@@ -185,8 +183,7 @@ https://prism.peermodelsnetwork.com/route/bode/run</code></pre>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>epicR</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model(&quot;epic&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;epic&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 </div>
 <div id="fev1-api" class="section level2" number="18.4">
@@ -195,8 +192,7 @@ results &lt;- model_run(input)</code></pre>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>fev1</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model(&quot;fev1&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;fev1&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 <p><strong>Cloud Access through Linux Bash</strong></p>
 <p>In Ubuntu, you can call the API with <code>curl</code>:</p>
@@ -214,8 +210,7 @@ https://prism.peermodelsnetwork.com/route/fev1/run
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>cvdanderson</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model(&quot;cvdanderson&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;cvdanderson&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 <p><strong>Cloud Access through Linux Bash</strong></p>
 <p>In Ubuntu, you can call the API with <code>curl</code>:</p>
@@ -232,8 +227,7 @@ https://prism.peermodelsnetwork.com/route/cvdanderson/run</code></pre>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>chdwilson</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model(&quot;chdwilson&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;chdwilson&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 <p><strong>Cloud Access through Linux Bash</strong></p>
 <p>In Ubuntu, you can call the API with <code>curl</code>:</p>
@@ -250,8 +244,7 @@ https://prism.peermodelsnetwork.com/route/chdwilson/run</code></pre>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>chdwilson</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model(&quot;cfmortality&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;cfmortality&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 <p><strong>Cloud Access through Linux Bash</strong></p>
 <p>In Ubuntu, you can call the API with <code>curl</code>:</p>
@@ -268,8 +261,7 @@ https://prism.peermodelsnetwork.com/route/cfmortality/run</code></pre>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>QRISK3</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model(&quot;qrisk3&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;qrisk3&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 </div>
 <div id="codexcopd-api" class="section level2" number="18.9">
@@ -278,8 +270,7 @@ results &lt;- model_run(input)</code></pre>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>codexcopd</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model(&quot;codexcopd&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;codexcopd&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 <p><strong>Cloud Access through Linux Bash</strong></p>
 <p>In Ubuntu, you can call the API with <code>curl</code>:</p>
@@ -296,9 +287,7 @@ https://prism.peermodelsnetwork.com/route/codexcopd/run</code></pre>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example inputs provided by the modelling team:</p>
 <pre><code>library(peermodels)
 
-connect_to_model(&quot;mmrcea&quot;, api_key = YOUR_API_KEY)
-
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;mmrcea&quot;, api_key = YOUR_API_KEY)
 
 input$timeHorizon                                    &lt;- 5
 input$discountRate                                   &lt;- 0.015
@@ -322,8 +311,7 @@ Currently, fitting the model with default parameters takes about 5 minutes. We a
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>covidseir</code> package:</p>
 <pre><code>library(peermodels)
-connect_to_model(&quot;covidseir&quot;, api_key = YOUR_API_KEY, bypass_router = T)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;covidseir&quot;, api_key = YOUR_API_KEY, bypass_router = T)
 names(input)
 input$daily_cases
 results &lt;- model_run(input)
@@ -395,8 +383,7 @@ http://model-covidseir.cp.prism-ubc.linaralabs.com/ocpu/library/covidseirPrism/R
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>PLCOM2012</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model(&quot;PLCOm2012&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;PLCOm2012&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 <p><strong>Cloud Access through Linux Bash</strong></p>
 <p>In Ubuntu, you can call the API with <code>curl</code>:</p>
@@ -413,8 +400,7 @@ https://prism.peermodelsnetwork.com/route/plcom2012/run</code></pre>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>ADO</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model(&quot;ado&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;ado&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 <p><strong>Cloud Access through Linux Bash</strong></p>
 <p>In Ubuntu, you can call the API with <code>curl</code>:</p>
@@ -431,8 +417,7 @@ http://model-ado.cp.prism-ubc.linaralabs.com/ocpu/library/adoPrism/R/gateway/jso
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>DOSE</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model(&quot;dose&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;dose&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 <p><strong>Cloud Access through Linux Bash</strong></p>
 <p>In Ubuntu, you can call the API with <code>curl</code>:</p>
@@ -449,8 +434,7 @@ http://model-dose.cp.prism-ubc.linaralabs.com/ocpu/library/dosePrism/R/gateway/j
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>ISARIC4C</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model(&quot;isaric4c&quot;, api_key = YOUR_API_KEY)
-input &lt;- get_default_input()
+input &lt;- get_default_input(&quot;isaric4c&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 <p><strong>Cloud Access through Linux Bash</strong></p>
 <p>In Ubuntu, you can call the API with <code>curl</code>:</p>
@@ -473,7 +457,6 @@ http://model-dose.cp.prism-ubc.linaralabs.com/ocpu/library/isaric4cPrism/R/gatew
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -514,7 +497,7 @@ gitbook.start({
 },
 "download": ["prismGuide.pdf", "prismGuide.epub"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {

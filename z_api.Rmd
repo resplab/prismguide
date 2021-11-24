@@ -9,8 +9,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("accept", api_key = YOUR_API_KEY)
-input <- get_default_input()
+input <- get_default_input("accept", api_key = YOUR_API_KEY)
 results <- model_run(input)
 ```
 
@@ -49,8 +48,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("bode", api_key = YOUR_API_KEY)
-input <- get_default_input()
+input <- get_default_input("bode", api_key = YOUR_API_KEY)
 results <- model_run(input)
 ```
 
@@ -76,8 +74,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("epic", api_key = YOUR_API_KEY)
-input <- get_default_input()
+input <- get_default_input("epic", api_key = YOUR_API_KEY)
 results <- model_run(input)
 ```
 
@@ -90,8 +87,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("fev1", api_key = YOUR_API_KEY)
-input <- get_default_input()
+input <- get_default_input("fev1", api_key = YOUR_API_KEY)
 results <- model_run(input)
 ```
 
@@ -118,8 +114,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("cvdanderson", api_key = YOUR_API_KEY)
-input <- get_default_input()
+input <- get_default_input("cvdanderson", api_key = YOUR_API_KEY)
 results <- model_run(input)
 ```
 
@@ -145,8 +140,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("chdwilson", api_key = YOUR_API_KEY)
-input <- get_default_input()
+input <- get_default_input("chdwilson", api_key = YOUR_API_KEY)
 results <- model_run(input)
 ```
 
@@ -171,8 +165,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("cfmortality", api_key = YOUR_API_KEY)
-input <- get_default_input()
+input <- get_default_input("cfmortality", api_key = YOUR_API_KEY)
 results <- model_run(input)
 ```
 
@@ -197,8 +190,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("qrisk3", api_key = YOUR_API_KEY)
-input <- get_default_input()
+input <- get_default_input("qrisk3", api_key = YOUR_API_KEY)
 results <- model_run(input)
 ```
 
@@ -211,8 +203,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("codexcopd", api_key = YOUR_API_KEY)
-input <- get_default_input()
+input <- get_default_input("codexcopd", api_key = YOUR_API_KEY)
 results <- model_run(input)
 ```
 
@@ -236,9 +227,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 library(peermodels)
 
-connect_to_model("mmrcea", api_key = YOUR_API_KEY)
-
-input <- get_default_input()
+input <- get_default_input("mmrcea", api_key = YOUR_API_KEY)
 
 input$timeHorizon                                    <- 5
 input$discountRate                                   <- 0.015
@@ -269,8 +258,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 
 ```
 library(peermodels)
-connect_to_model("covidseir", api_key = YOUR_API_KEY, bypass_router = T)
-input <- get_default_input()
+input <- get_default_input("covidseir", api_key = YOUR_API_KEY, bypass_router = T)
 names(input)
 input$daily_cases
 results <- model_run(input)
@@ -360,8 +348,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("PLCOm2012", api_key = YOUR_API_KEY)
-input <- get_default_input()
+input <- get_default_input("PLCOm2012", api_key = YOUR_API_KEY)
 results <- model_run(input)
 ```
 
@@ -388,8 +375,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("ado", api_key = YOUR_API_KEY)
-input <- get_default_input()
+input <- get_default_input("ado", api_key = YOUR_API_KEY)
 results <- model_run(input)
 ```
 
@@ -415,8 +401,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("dose", api_key = YOUR_API_KEY)
-input <- get_default_input()
+input <- get_default_input("dose", api_key = YOUR_API_KEY)
 results <- model_run(input)
 ```
 
@@ -442,8 +427,7 @@ Users can access models on the Peer Models Network using the `peermodels` R pack
 ```
 remotes::install_github (resplab/peermodels)
 library(peermodels)
-connect_to_model("isaric4c", api_key = YOUR_API_KEY)
-input <- get_default_input()
+input <- get_default_input("isaric4c", api_key = YOUR_API_KEY)
 results <- model_run(input)
 ```
 
