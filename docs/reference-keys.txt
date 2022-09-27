@@ -11,6 +11,7 @@ dose
 epic
 fev1
 framinghamfev1predictor
+isaric4c
 mmrcea
 plcom2012
 qrisk3
@@ -29,6 +30,4 @@ covidseir-api-experimental
 plcom2012-api
 ado-api
 dose-api
-how-to-access-the-model
-isaric4c
 isaric4c-api

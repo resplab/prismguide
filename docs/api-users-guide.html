@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>18 API Users’ Guide | Peer Models Network API Guide</title>
   <meta name="description" content="User guide for accessing models hosted on the Peer Models Network cloud." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="18 API Users’ Guide | Peer Models Network API Guide" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="User guide for accessing models hosted on the Peer Models Network cloud." />
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Amin Adibi, Stephanie Harvard, Mohsen Sadatsafavi" />
 
 
-<meta name="date" content="2021-11-24" />
+<meta name="date" content="2022-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="qrisk3.html"/>
 
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -74,10 +73,7 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="accept.html"><a href="accept.html"><i class="fa fa-check"></i><b>2</b> ACCEPT</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="accept.html"><a href="accept.html#how-to-access-the-model"><i class="fa fa-check"></i><b>2.1</b> How to Access the Model</a></li>
-</ul></li>
+<li class="chapter" data-level="2" data-path="accept.html"><a href="accept.html"><i class="fa fa-check"></i><b>2</b> ACCEPT</a></li>
 <li class="chapter" data-level="3" data-path="ado.html"><a href="ado.html"><i class="fa fa-check"></i><b>3</b> ADO</a></li>
 <li class="chapter" data-level="4" data-path="bode.html"><a href="bode.html"><i class="fa fa-check"></i><b>4</b> BODE</a></li>
 <li class="chapter" data-level="5" data-path="cfmortality.html"><a href="cfmortality.html"><i class="fa fa-check"></i><b>5</b> CFMortality</a></li>
@@ -131,10 +127,10 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="api-users-guide" class="section level1" number="18">
-<h1><span class="header-section-number">18</span> API Users’ Guide</h1>
-<div id="accept-api" class="section level2" number="18.1">
-<h2><span class="header-section-number">18.1</span> ACCEPT API</h2>
+<div id="api-users-guide" class="section level1 hasAnchor" number="18">
+<h1><span class="header-section-number">18</span> API Users’ Guide<a href="api-users-guide.html#api-users-guide" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="accept-api" class="section level2 hasAnchor" number="18.1">
+<h2><span class="header-section-number">18.1</span> ACCEPT API<a href="api-users-guide.html#accept-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patients provided in the <code>accept</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -160,8 +156,8 @@ print(results)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;ID&quot;: &quot;10001&quot;,&quot;male&quot;: 1,&quot;age&quot;: 57,&quot;smoker&quot;: 0,&quot;oxygen&quot;: 0,&quot;statin&quot;: 0,&quot;LAMA&quot;: 1,&quot;LABA&quot;: 1,&quot;ICS&quot;: 1,&quot;FEV1&quot;: 51,&quot;BMI&quot;: 18,&quot;SGRQ&quot;: 63,&quot;LastYrExacCount&quot;: 2,&quot;LastYrSevExacCount&quot;: 1,&quot;randomized_azithromycin&quot;: 0,&quot;randomized_statin&quot;: 0,&quot;randomized_LAMA&quot;: 0,&quot;randomized_LABA&quot;: 0,&quot;randomized_ICS&quot;: 0, &quot;random_sampling_N&quot; : 1000, &quot;random_distribution_iteration&quot; : 20000, &quot;calculate_CIs&quot; : &quot;TRUE&quot;}]}&#39; \
 https://prism.peermodelsnetwork.com/route/accept/run</code></pre>
 </div>
-<div id="bode-api" class="section level2" number="18.2">
-<h2><span class="header-section-number">18.2</span> BODE API</h2>
+<div id="bode-api" class="section level2 hasAnchor" number="18.2">
+<h2><span class="header-section-number">18.2</span> BODE API<a href="api-users-guide.html#bode-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>bode</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -177,8 +173,8 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;FEV1&quot;: 40,&quot;mMRC&quot;: 3,&quot;BMI&quot;: 22,&quot;walk&quot;: 100}]}&#39; \
 https://prism.peermodelsnetwork.com/route/bode/run</code></pre>
 </div>
-<div id="epic-api" class="section level2" number="18.3">
-<h2><span class="header-section-number">18.3</span> EPIC API</h2>
+<div id="epic-api" class="section level2 hasAnchor" number="18.3">
+<h2><span class="header-section-number">18.3</span> EPIC API<a href="api-users-guide.html#epic-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>epicR</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -186,8 +182,8 @@ library(peermodels)
 input &lt;- get_default_input(&quot;epic&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 </div>
-<div id="fev1-api" class="section level2" number="18.4">
-<h2><span class="header-section-number">18.4</span> FEV1 API</h2>
+<div id="fev1-api" class="section level2 hasAnchor" number="18.4">
+<h2><span class="header-section-number">18.4</span> FEV1 API<a href="api-users-guide.html#fev1-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>fev1</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -204,8 +200,8 @@ results &lt;- model_run(input)</code></pre>
 https://prism.peermodelsnetwork.com/route/fev1/run
 </code></pre>
 </div>
-<div id="cvdanderson-api" class="section level2" number="18.5">
-<h2><span class="header-section-number">18.5</span> CVDAnderson API</h2>
+<div id="cvdanderson-api" class="section level2 hasAnchor" number="18.5">
+<h2><span class="header-section-number">18.5</span> CVDAnderson API<a href="api-users-guide.html#cvdanderson-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>cvdanderson</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -221,8 +217,8 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;age&quot;: 33,&quot;gender&quot;: 1,&quot;Tchol&quot;: 230,&quot;ECG_LVH&quot;: 0,&quot;HDLchol&quot;: 48, &quot;SBP&quot;: 135, &quot;DBP&quot;: 88, &quot;diabetes&quot;: 1, &quot;smoker&quot;: 1, &quot;t&quot;: 10}]}&#39; \
 https://prism.peermodelsnetwork.com/route/cvdanderson/run</code></pre>
 </div>
-<div id="chdwilson-api" class="section level2" number="18.6">
-<h2><span class="header-section-number">18.6</span> CHDWilson API</h2>
+<div id="chdwilson-api" class="section level2 hasAnchor" number="18.6">
+<h2><span class="header-section-number">18.6</span> CHDWilson API<a href="api-users-guide.html#chdwilson-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>chdwilson</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -238,8 +234,8 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;age&quot;: 55,&quot;gender&quot;: 1,&quot;TChol&quot;: 250,&quot;LDL&quot;: 120,&quot;HDL&quot;: 39, &quot;SBP&quot;: 146, &quot;DBP&quot;: 88, &quot;diabetes&quot;: 0, &quot;smoker&quot;: 1}]}&#39; \
 https://prism.peermodelsnetwork.com/route/chdwilson/run</code></pre>
 </div>
-<div id="cfmortality-api" class="section level2" number="18.7">
-<h2><span class="header-section-number">18.7</span> CFMortality API</h2>
+<div id="cfmortality-api" class="section level2 hasAnchor" number="18.7">
+<h2><span class="header-section-number">18.7</span> CFMortality API<a href="api-users-guide.html#cfmortality-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>chdwilson</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -255,8 +251,8 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;male&quot;: 0,&quot;age&quot;: 57,&quot;fvc&quot;: 66.7,&quot;fev1&quot;: 47.4,&quot;fev1LastYear&quot;: 80.5,&quot;bcepacia&quot;: 0,&quot;underweight&quot;: 0,&quot;nHosp&quot;: 0,&quot;pancreaticInsufficient&quot;: 1,&quot;CFRelatedDiabetes&quot;: 0,&quot;ageAtDiagnosis&quot;: 0.9}]}&#39; \
 https://prism.peermodelsnetwork.com/route/cfmortality/run</code></pre>
 </div>
-<div id="qrisk3-api" class="section level2" number="18.8">
-<h2><span class="header-section-number">18.8</span> QRISK3 API</h2>
+<div id="qrisk3-api" class="section level2 hasAnchor" number="18.8">
+<h2><span class="header-section-number">18.8</span> QRISK3 API<a href="api-users-guide.html#qrisk3-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>QRISK3</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -264,8 +260,8 @@ library(peermodels)
 input &lt;- get_default_input(&quot;qrisk3&quot;, api_key = YOUR_API_KEY)
 results &lt;- model_run(input)</code></pre>
 </div>
-<div id="codexcopd-api" class="section level2" number="18.9">
-<h2><span class="header-section-number">18.9</span> CODEXCOPD API</h2>
+<div id="codexcopd-api" class="section level2 hasAnchor" number="18.9">
+<h2><span class="header-section-number">18.9</span> CODEXCOPD API<a href="api-users-guide.html#codexcopd-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>codexcopd</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -281,8 +277,8 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;age&quot;:40,&quot;charlson&quot;:8,&quot;FEV1&quot;:40,&quot;mMRC&quot;:3,&quot;exacerbation&quot;:2}]}&#39; \
 https://prism.peermodelsnetwork.com/route/codexcopd/run</code></pre>
 </div>
-<div id="mmrcea-api" class="section level2" number="18.10">
-<h2><span class="header-section-number">18.10</span> MMRCEA API</h2>
+<div id="mmrcea-api" class="section level2 hasAnchor" number="18.10">
+<h2><span class="header-section-number">18.10</span> MMRCEA API<a href="api-users-guide.html#mmrcea-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example inputs provided by the modelling team:</p>
 <pre><code>library(peermodels)
@@ -303,8 +299,8 @@ input$ecmmrDefReferredHCPIntArm                      &lt;- 0.8
 
 model_run(input)</code></pre>
 </div>
-<div id="covidseir-api-experimental" class="section level2" number="18.11">
-<h2><span class="header-section-number">18.11</span> COVIDSEIR API (experimental)</h2>
+<div id="covidseir-api-experimental" class="section level2 hasAnchor" number="18.11">
+<h2><span class="header-section-number">18.11</span> COVIDSEIR API (experimental)<a href="api-users-guide.html#covidseir-api-experimental" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We have recently deployed the Bayesian SEIR model to estimate physical-distancing effects <a href="https://doi.org/10.1101/2020.04.17.20070086">developed by Anderson et al</a> to our cloud infrastructure. The current version of the R package deployed to the PRISM server is <code>covidseir v0.0.0.9006</code>.</p>
 <p>The current implementation of the <code>covidseir</code> package is experimental and has some limitations, given the computational intensity of the model. Depending on the number of <code>chains</code> and <code>iterations</code>, the <code>html</code> connection might be dropped for calls that more than a dozen minutes.
 Currently, fitting the model with default parameters takes about 5 minutes. We are actively working to implement asynchronous support which would email the results back to the user when hours long model runs are requested.</p>
@@ -377,8 +373,8 @@ results = json.loads(response.text)</code></pre>
 } &#39; \
 http://model-covidseir.cp.prism-ubc.linaralabs.com/ocpu/library/covidseirPrism/R/gateway/json</code></pre>
 </div>
-<div id="plcom2012-api" class="section level2" number="18.12">
-<h2><span class="header-section-number">18.12</span> PLCOM2012 API</h2>
+<div id="plcom2012-api" class="section level2 hasAnchor" number="18.12">
+<h2><span class="header-section-number">18.12</span> PLCOM2012 API<a href="api-users-guide.html#plcom2012-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>PLCOM2012</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -394,8 +390,8 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;age&quot;=62, &quot;race&quot;=&quot;White&quot;, &quot;education&quot;=4, &quot;bmi&quot;=27, &quot;copd&quot;=0, &quot;cancer_hist&quot;=0, &quot;family_hist_lung_cancer&quot;=0, &quot;smoking_status&quot;=0, &quot;smoking_intensity&quot;=80, &quot;duration_smoking&quot;=27, &quot;smoking_quit_time&quot;=10}]}&#39; \
 https://prism.peermodelsnetwork.com/route/plcom2012/run</code></pre>
 </div>
-<div id="ado-api" class="section level2" number="18.13">
-<h2><span class="header-section-number">18.13</span> ADO API</h2>
+<div id="ado-api" class="section level2 hasAnchor" number="18.13">
+<h2><span class="header-section-number">18.13</span> ADO API<a href="api-users-guide.html#ado-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>ADO</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -411,8 +407,8 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;fev&quot;:65,  &quot;mmrc&quot;:1, &quot;age&quot;:41 }]}&#39; \
 http://model-ado.cp.prism-ubc.linaralabs.com/ocpu/library/adoPrism/R/gateway/json</code></pre>
 </div>
-<div id="dose-api" class="section level2" number="18.14">
-<h2><span class="header-section-number">18.14</span> DOSE API</h2>
+<div id="dose-api" class="section level2 hasAnchor" number="18.14">
+<h2><span class="header-section-number">18.14</span> DOSE API<a href="api-users-guide.html#dose-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>DOSE</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)
@@ -428,8 +424,8 @@ results &lt;- model_run(input)</code></pre>
 -d &#39;{&quot;func&quot;:[&quot;prism_model_run&quot;],&quot;model_input&quot;:[{&quot;mmrc&quot;:1, &quot;fev&quot;:55, &quot;smoking_status&quot;:1, &quot;exacerbation&quot;:2}]}&#39; \
 http://model-dose.cp.prism-ubc.linaralabs.com/ocpu/library/dosePrism/R/gateway/json</code></pre>
 </div>
-<div id="isaric4c-api" class="section level2" number="18.15">
-<h2><span class="header-section-number">18.15</span> ISARIC4C API</h2>
+<div id="isaric4c-api" class="section level2 hasAnchor" number="18.15">
+<h2><span class="header-section-number">18.15</span> ISARIC4C API<a href="api-users-guide.html#isaric4c-api" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cloud Access through R</strong></p>
 <p>Users can access models on the Peer Models Network using the <code>peermodels</code> R package, available on <a href="https://github.com/resplab/peermodels">GitHub</a>. The following code snippet illustrates how you can run the model for example patient provided in the <code>ISARIC4C</code> package:</p>
 <pre><code>remotes::install_github (resplab/peermodels)

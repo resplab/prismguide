@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>14 ISARIC4C | Peer Models Network API Guide</title>
   <meta name="description" content="User guide for accessing models hosted on the Peer Models Network cloud." />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="14 ISARIC4C | Peer Models Network API Guide" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="User guide for accessing models hosted on the Peer Models Network cloud." />
   
@@ -24,7 +23,7 @@
 <meta name="author" content="Amin Adibi, Stephanie Harvard, Mohsen Sadatsafavi" />
 
 
-<meta name="date" content="2021-11-23" />
+<meta name="date" content="2022-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="framinghamfev1predictor.html"/>
 <link rel="next" href="mmrcea.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -74,10 +73,7 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="accept.html"><a href="accept.html"><i class="fa fa-check"></i><b>2</b> ACCEPT</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="accept.html"><a href="accept.html#how-to-access-the-model"><i class="fa fa-check"></i><b>2.1</b> How to Access the Model</a></li>
-</ul></li>
+<li class="chapter" data-level="2" data-path="accept.html"><a href="accept.html"><i class="fa fa-check"></i><b>2</b> ACCEPT</a></li>
 <li class="chapter" data-level="3" data-path="ado.html"><a href="ado.html"><i class="fa fa-check"></i><b>3</b> ADO</a></li>
 <li class="chapter" data-level="4" data-path="bode.html"><a href="bode.html"><i class="fa fa-check"></i><b>4</b> BODE</a></li>
 <li class="chapter" data-level="5" data-path="cfmortality.html"><a href="cfmortality.html"><i class="fa fa-check"></i><b>5</b> CFMortality</a></li>
@@ -131,8 +127,8 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="isaric4c" class="section level1" number="14">
-<h1><span class="header-section-number">14</span> ISARIC4C</h1>
+<div id="isaric4c" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">14</span> ISARIC4C<a href="isaric4c.html#isaric4c" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <table>
 <colgroup>
 <col width="48%" />
@@ -187,7 +183,6 @@
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -228,7 +223,7 @@ gitbook.start({
 },
 "download": ["prismGuide.pdf", "prismGuide.epub"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
